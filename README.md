@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2289 | Steps to Make Array Non-decreasing | Medium | [Python](2289-steps-to-make-array-non-decreasing.py) |
 | 449 | Serialize and Deserialize BST | Medium | [Python](449-serialize-and-deserialize-bst.py) |
 | 1155 | Number of Dice Rolls With Target Sum | Medium | [Python](1155-number-of-dice-rolls-with-target-sum.py) |
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
@@ -17,13 +18,21 @@ Requires Python 3.9 or newer.
 Run the standalone solutions from the repository directory:
 
 ```bash
+python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
 ```
 
-The scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
+The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 2289 — Steps to Make Array Non-decreasing
+
+Use a monotonic stack storing each value and the number of steps needed for its removal. Each element is pushed and popped at most once.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 449 — Serialize and Deserialize BST
 
