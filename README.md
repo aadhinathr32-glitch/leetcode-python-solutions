@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3458 | Select K Disjoint Special Substrings | Medium | [Python](3458-select-k-disjoint-special-substrings.py) |
 | 2289 | Steps to Make Array Non-decreasing | Medium | [Python](2289-steps-to-make-array-non-decreasing.py) |
 | 449 | Serialize and Deserialize BST | Medium | [Python](449-serialize-and-deserialize-bst.py) |
 | 1155 | Number of Dice Rolls With Target Sum | Medium | [Python](1155-number-of-dice-rolls-with-target-sum.py) |
@@ -15,9 +16,10 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 Requires Python 3.9 or newer.
 
-Run the standalone solutions from the repository directory:
+Run standalone solutions from the repository directory:
 
 ```bash
+python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
@@ -26,6 +28,13 @@ python 2391-minimum-amount-of-time-to-collect-garbage.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 3458 — Select K Disjoint Special Substrings
+
+Build candidate intervals from each character's first occurrence, expanding an interval until it contains every occurrence of each character inside it. Exclude the whole string, sort intervals by ending position, and greedily choose non-overlapping intervals. If `k == 0`, return `True`.
+
+- **Time:** O(26 × n + 26 log 26), effectively O(n) for lowercase English letters
+- **Auxiliary space:** O(26), effectively O(1)
 
 ### 2289 — Steps to Make Array Non-decreasing
 
