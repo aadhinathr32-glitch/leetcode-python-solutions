@@ -12,6 +12,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1155 | Number of Dice Rolls With Target Sum | Medium | [Python](1155-number-of-dice-rolls-with-target-sum.py) |
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
+| 78 | Subsets | Medium | [Python](78-subsets.py) |
 
 ## How to run
 
@@ -25,6 +26,7 @@ python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
 python 779-k-th-symbol-in-grammar.py
+python 78-subsets.py
 ```
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
@@ -73,6 +75,13 @@ Use recursion to trace the symbol back to the previous row. Its parent position 
 
 - **Time:** O(n)
 - **Auxiliary space:** O(n) for the recursion stack
+
+### 78 — Subsets
+
+Start with the empty subset. For each number, create new subsets by adding that number to every subset already collected. Since the input values are unique, this generates every subset exactly once.
+
+- **Time:** O(n × 2ⁿ), because there are 2ⁿ subsets and copying each subset takes up to O(n)
+- **Auxiliary space:** O(n × 2ⁿ) to store all subsets
 
 ## Goal
 
