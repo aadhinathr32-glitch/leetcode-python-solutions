@@ -13,6 +13,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
 | 1685 | Sum of Absolute Differences in a Sorted Array | Medium | [Python](1685-sum-of-absolute-differences-in-a-sorted-array.py) |
 | 1472 | Design Browser History | Medium | [Python](1472-design-browser-history.py) |
+| 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -29,6 +30,7 @@ python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
 python 1685-sum-of-absolute-differences-in-a-sorted-array.py
 python 1472-design-browser-history.py
+python 1029-two-city-scheduling.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 ```
@@ -86,6 +88,13 @@ Store visited URLs in a list and track the current page using an index. Visiting
 
 - **visit:** O(n) due to slicing the forward history
 - **back / forward:** O(1)
+
+### 1029 — Two City Scheduling
+
+Sort people by the difference between their city A and city B costs. Assign the first half to city A and the remaining half to city B, ensuring exactly half go to each city at minimum total cost.
+
+- **Time:** O(n log n)
+- **Auxiliary space:** O(n) for the sorted copy
 
 ### 779 — K-th Symbol in Grammar
 
