@@ -11,6 +11,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 449 | Serialize and Deserialize BST | Medium | [Python](449-serialize-and-deserialize-bst.py) |
 | 1155 | Number of Dice Rolls With Target Sum | Medium | [Python](1155-number-of-dice-rolls-with-target-sum.py) |
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
+| 1685 | Sum of Absolute Differences in a Sorted Array | Medium | [Python](1685-sum-of-absolute-differences-in-a-sorted-array.py) |
 | 1472 | Design Browser History | Medium | [Python](1472-design-browser-history.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
@@ -26,6 +27,7 @@ python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
+python 1685-sum-of-absolute-differences-in-a-sorted-array.py
 python 1472-design-browser-history.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
@@ -70,6 +72,13 @@ Count the pickup time for every unit of garbage. For each truck type, add the tr
 
 - **Time:** O(n + total garbage characters), with only three garbage types
 - **Auxiliary space:** O(1) auxiliary space, excluding input and temporary travel slices
+
+### 1685 — Sum of Absolute Differences in a Sorted Array
+
+Use a running prefix sum and the total sum. Since the array is sorted, calculate the sum of differences to the left and right of each element in constant time per index.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n) for the result
 
 ### 1472 — Design Browser History
 
