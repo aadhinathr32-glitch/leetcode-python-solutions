@@ -11,6 +11,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 449 | Serialize and Deserialize BST | Medium | [Python](449-serialize-and-deserialize-bst.py) |
 | 1155 | Number of Dice Rolls With Target Sum | Medium | [Python](1155-number-of-dice-rolls-with-target-sum.py) |
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
+| 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 
 ## How to run
 
@@ -23,6 +24,7 @@ python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
+python 779-k-th-symbol-in-grammar.py
 ```
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
@@ -64,6 +66,13 @@ Count the pickup time for every unit of garbage. For each truck type, add the tr
 
 - **Time:** O(n + total garbage characters), with only three garbage types
 - **Auxiliary space:** O(1) auxiliary space, excluding input and temporary travel slices
+
+### 779 — K-th Symbol in Grammar
+
+Use recursion to trace the symbol back to the previous row. Its parent position is `(k + 1) // 2`; odd positions preserve the parent's value, while even positions flip it.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n) for the recursion stack
 
 ## Goal
 
