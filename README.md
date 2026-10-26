@@ -13,7 +13,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
 | 1685 | Sum of Absolute Differences in a Sorted Array | Medium | [Python](1685-sum-of-absolute-differences-in-a-sorted-array.py) |
 | 1472 | Design Browser History | Medium | [Python](1472-design-browser-history.py) |
-| 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
+| 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |\n| 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -96,7 +96,7 @@ Sort people by the difference between their city A and city B costs. Assign the 
 - **Time:** O(n log n)
 - **Auxiliary space:** O(n) for the sorted copy
 
-### 779 — K-th Symbol in Grammar
+### 841 — Keys and Rooms\n\nUse an iterative depth-first search starting from room 0. Track visited rooms in a set and push each newly discovered room onto a stack. All rooms are reachable if every room is visited.\n\n- **Time:** O(n + k), where n is the number of rooms and k is the total number of keys\n- **Auxiliary space:** O(n) for the stack and visited set\n\n### 779 — K-th Symbol in Grammar
 
 Use recursion to trace the symbol back to the previous row. Its parent position is `(k + 1) // 2`; odd positions preserve the parent's value, while even positions flip it.
 
