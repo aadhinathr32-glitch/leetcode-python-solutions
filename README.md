@@ -17,6 +17,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
+| 3868 | Minimum Cost to Equalize Arrays Using Swaps | Medium | [Python](3868-minimum-cost-to-equalize-arrays-using-swaps.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -37,6 +38,7 @@ python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python minimum-cost-to-make-arrays-identical.py
+python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 ```
@@ -133,6 +135,13 @@ Start with the empty subset. For each number, create new subsets by adding that 
 ### Minimum Cost to Make Arrays Identical
 
 Count each value in both arrays together. Every combined frequency must be even, because the final arrays must contain the same number of each value. If any frequency is odd, return `-1`. Otherwise, the target count for each array is half the combined frequency; count the surplus occurrences in `nums1` to get the minimum number of paid cross-array swaps.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(u), where u is the number of distinct values
+
+### 3868 — Minimum Cost to Equalize Arrays Using Swaps
+
+Count the combined frequency of every value. If any frequency is odd, equal arrays are impossible. Otherwise, each array must contain half of each value's combined frequency; sum the surplus occurrences in `nums1` to get the minimum number of paid swaps.
 
 - **Time:** O(n)
 - **Auxiliary space:** O(u), where u is the number of distinct values
