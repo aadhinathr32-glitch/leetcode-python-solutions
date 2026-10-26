@@ -16,6 +16,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1105 | Filling Bookcase Shelves | Medium | [Python](1105-filling-bookcase-shelves.py) |
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
+| — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -35,6 +36,7 @@ python 1472-design-browser-history.py
 python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
+python minimum-cost-to-make-arrays-identical.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 ```
@@ -127,6 +129,13 @@ Start with the empty subset. For each number, create new subsets by adding that 
 
 - **Time:** O(n × 2ⁿ), because there are 2ⁿ subsets and copying each subset takes up to O(n)
 - **Auxiliary space:** O(n × 2ⁿ) to store all subsets
+
+### Minimum Cost to Make Arrays Identical
+
+Count each value in both arrays together. Every combined frequency must be even, because the final arrays must contain the same number of each value. If any frequency is odd, return `-1`. Otherwise, the target count for each array is half the combined frequency; count the surplus occurrences in `nums1` to get the minimum number of paid cross-array swaps.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(u), where u is the number of distinct values
 
 ## Goal
 
