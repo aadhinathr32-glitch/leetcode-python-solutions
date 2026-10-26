@@ -16,6 +16,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1105 | Filling Bookcase Shelves | Medium | [Python](1105-filling-bookcase-shelves.py) |
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
+| 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
 | 3868 | Minimum Cost to Equalize Arrays Using Swaps | Medium | [Python](3868-minimum-cost-to-equalize-arrays-using-swaps.py) |
 | 1424 | Diagonal Traverse II | Medium | [Python](1424-diagonal-traverse-ii.py) |
@@ -38,6 +39,7 @@ python 1472-design-browser-history.py
 python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
+python 368-largest-divisible-subset.py
 python minimum-cost-to-make-arrays-identical.py
 python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
 python 1424-diagonal-traverse-ii.py
@@ -119,6 +121,13 @@ Use an iterative depth-first search starting from room 0. Track visited rooms in
 
 - **Time:** O(n + k), where n is the number of rooms and k is the total number of keys
 - **Auxiliary space:** O(n) for the stack and visited set
+
+### 368 — Largest Divisible Subset
+
+Sort the numbers, then use dynamic programming. For each number, record the length of the largest divisible subset ending there and the previous number that extends that subset. Follow the parent links from the longest endpoint to reconstruct one valid subset.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(n)
 
 ### 779 — K-th Symbol in Grammar
 
