@@ -18,6 +18,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
 | 3868 | Minimum Cost to Equalize Arrays Using Swaps | Medium | [Python](3868-minimum-cost-to-equalize-arrays-using-swaps.py) |
+| 1424 | Diagonal Traverse II | Medium | [Python](1424-diagonal-traverse-ii.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -39,6 +40,7 @@ python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python minimum-cost-to-make-arrays-identical.py
 python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
+python 1424-diagonal-traverse-ii.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 ```
@@ -145,6 +147,13 @@ Count the combined frequency of every value. If any frequency is odd, equal arra
 
 - **Time:** O(n)
 - **Auxiliary space:** O(u), where u is the number of distinct values
+
+### 1424 — Diagonal Traverse II
+
+Group each value by its diagonal index, `row + column`. Visit rows from bottom to top so values in each diagonal are already in the required order, then concatenate the diagonal groups.
+
+- **Time:** O(N), where N is the total number of elements
+- **Auxiliary space:** O(N) for the diagonal groups and result
 
 ## Goal
 
