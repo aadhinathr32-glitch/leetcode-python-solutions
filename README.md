@@ -13,7 +13,9 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 2391 | Minimum Amount of Time to Collect Garbage | Medium | [Python](2391-minimum-amount-of-time-to-collect-garbage.py) |
 | 1685 | Sum of Absolute Differences in a Sorted Array | Medium | [Python](1685-sum-of-absolute-differences-in-a-sorted-array.py) |
 | 1472 | Design Browser History | Medium | [Python](1472-design-browser-history.py) |
-| 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |\n| 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
+| 1105 | Filling Bookcase Shelves | Medium | [Python](1105-filling-bookcase-shelves.py) |
+| 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
+| 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
@@ -30,7 +32,9 @@ python 1155-number-of-dice-rolls-with-target-sum.py
 python 2391-minimum-amount-of-time-to-collect-garbage.py
 python 1685-sum-of-absolute-differences-in-a-sorted-array.py
 python 1472-design-browser-history.py
+python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
+python 841-keys-and-rooms.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 ```
@@ -89,6 +93,13 @@ Store visited URLs in a list and track the current page using an index. Visiting
 - **visit:** O(n) due to slicing the forward history
 - **back / forward:** O(1)
 
+### 1105 — Filling Bookcase Shelves
+
+Use dynamic programming where `dp[i]` is the minimum height needed for the first `i` books. For each position, try placing every valid consecutive group of books on the final shelf and combine its maximum height with the best height for the preceding books.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(n)
+
 ### 1029 — Two City Scheduling
 
 Sort people by the difference between their city A and city B costs. Assign the first half to city A and the remaining half to city B, ensuring exactly half go to each city at minimum total cost.
@@ -96,7 +107,14 @@ Sort people by the difference between their city A and city B costs. Assign the 
 - **Time:** O(n log n)
 - **Auxiliary space:** O(n) for the sorted copy
 
-### 841 — Keys and Rooms\n\nUse an iterative depth-first search starting from room 0. Track visited rooms in a set and push each newly discovered room onto a stack. All rooms are reachable if every room is visited.\n\n- **Time:** O(n + k), where n is the number of rooms and k is the total number of keys\n- **Auxiliary space:** O(n) for the stack and visited set\n\n### 779 — K-th Symbol in Grammar
+### 841 — Keys and Rooms
+
+Use an iterative depth-first search starting from room 0. Track visited rooms in a set and push each newly discovered room onto a stack. All rooms are reachable if every room is visited.
+
+- **Time:** O(n + k), where n is the number of rooms and k is the total number of keys
+- **Auxiliary space:** O(n) for the stack and visited set
+
+### 779 — K-th Symbol in Grammar
 
 Use recursion to trace the symbol back to the previous row. Its parent position is `(k + 1) // 2`; odd positions preserve the parent's value, while even positions flip it.
 
