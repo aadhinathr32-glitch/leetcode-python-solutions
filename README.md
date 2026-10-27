@@ -17,6 +17,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
+| 3462 | Maximum Sum With at Most K Elements | Medium | [Python](3462-maximum-sum-with-at-most-k-elements.py) |
 | 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
 | 3868 | Minimum Cost to Equalize Arrays Using Swaps | Medium | [Python](3868-minimum-cost-to-equalize-arrays-using-swaps.py) |
@@ -41,6 +42,7 @@ python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python 368-largest-divisible-subset.py
+python 3462-maximum-sum-with-at-most-k-elements.py
 python 1124-longest-well-performing-interval.py
 python minimum-cost-to-make-arrays-identical.py
 python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
@@ -130,6 +132,13 @@ Sort the numbers, then use dynamic programming. For each number, record the leng
 
 - **Time:** O(n²)
 - **Auxiliary space:** O(n)
+
+### 3462 — Maximum Sum With at Most K Elements
+
+For each row, take at most the number of elements allowed by its limit, choosing the largest values. Combine these candidates from all rows, sort them in descending order, and sum the largest `k` values. Since all grid values are non-negative, selecting fewer than `k` elements cannot improve the sum over selecting available positive candidates.
+
+- **Time:** O(n × m log m + L log L), where L is the total number of candidates collected
+- **Auxiliary space:** O(L)
 
 ### 1124 — Longest Well-Performing Interval
 
