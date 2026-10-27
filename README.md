@@ -17,7 +17,9 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
-| 791 | Custom Sort String | Medium | [Python](791-custom-sort-string.py) |\n| 3271 | Hash Divided String | Easy | [Python](3271-hash-divided-string.py) |
+| 791 | Custom Sort String | Medium | [Python](791-custom-sort-string.py) |
+| 2095 | Delete the Middle Node of a Linked List | Medium | [Python](2095-delete-the-middle-node-of-a-linked-list.py) |
+| 3271 | Hash Divided String | Easy | [Python](3271-hash-divided-string.py) |
 | 3462 | Maximum Sum With at Most K Elements | Medium | [Python](3462-maximum-sum-with-at-most-k-elements.py) |
 | 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
@@ -43,7 +45,9 @@ python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python 368-largest-divisible-subset.py
-python 791-custom-sort-string.py\npython 3271-hash-divided-string.py
+python 791-custom-sort-string.py
+python 2095-delete-the-middle-node-of-a-linked-list.py
+python 3271-hash-divided-string.py
 python 3462-maximum-sum-with-at-most-k-elements.py
 python 1124-longest-well-performing-interval.py
 python minimum-cost-to-make-arrays-identical.py
@@ -142,7 +146,21 @@ Count the characters in `s`. Append each character in `order` as many times as i
 - **Time:** O(|order| + |s|)
 - **Auxiliary space:** O(|s|) for the character counts and result
 
-### 3271 — Hash Divided String\n\nSplit the string into chunks of length `k`. For each chunk, sum each character's zero-based alphabet index, take the sum modulo 26, and convert the result back to a lowercase letter.\n\n- **Time:** O(n)\n- **Auxiliary space:** O(n) for the result\n\n### 3462 — Maximum Sum With at Most K Elements
+### 2095 — Delete the Middle Node of a Linked List
+
+Use slow and fast pointers to find the middle node. Keep track of the node before `slow`, then skip the middle node by updating its `next` pointer. If the list has one node, return `None`.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(1)
+
+### 3271 — Hash Divided String
+
+Split the string into chunks of length `k`. For each chunk, sum each character's zero-based alphabet index, take the sum modulo 26, and convert the result back to a lowercase letter.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n) for the result
+
+### 3462 — Maximum Sum With at Most K Elements
 
 For each row, take at most the number of elements allowed by its limit, choosing the largest values. Combine these candidates from all rows, sort them in descending order, and sum the largest `k` values. Since all grid values are non-negative, selecting fewer than `k` elements cannot improve the sum over selecting available positive candidates.
 
