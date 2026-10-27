@@ -17,6 +17,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
+| 791 | Custom Sort String | Medium | [Python](791-custom-sort-string.py) |
 | 3462 | Maximum Sum With at Most K Elements | Medium | [Python](3462-maximum-sum-with-at-most-k-elements.py) |
 | 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
@@ -42,6 +43,7 @@ python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python 368-largest-divisible-subset.py
+python 791-custom-sort-string.py
 python 3462-maximum-sum-with-at-most-k-elements.py
 python 1124-longest-well-performing-interval.py
 python minimum-cost-to-make-arrays-identical.py
@@ -132,6 +134,13 @@ Sort the numbers, then use dynamic programming. For each number, record the leng
 
 - **Time:** O(n²)
 - **Auxiliary space:** O(n)
+
+### 791 — Custom Sort String
+
+Count the characters in `s`. Append each character in `order` as many times as it occurs in `s`, following the custom order. Then append any remaining characters that do not appear in `order`.
+
+- **Time:** O(|order| + |s|)
+- **Auxiliary space:** O(|s|) for the character counts and result
 
 ### 3462 — Maximum Sum With at Most K Elements
 
