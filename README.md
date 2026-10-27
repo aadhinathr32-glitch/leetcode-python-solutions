@@ -48,6 +48,7 @@ python 841-keys-and-rooms.py
 python 368-largest-divisible-subset.py
 python 791-custom-sort-string.py
 python 2095-delete-the-middle-node-of-a-linked-list.py
+python 1621-number-of-sets-of-k-non-overlapping-line-segments.py
 python 3271-hash-divided-string.py
 python 3462-maximum-sum-with-at-most-k-elements.py
 python 1124-longest-well-performing-interval.py
@@ -154,6 +155,13 @@ Use slow and fast pointers to find the middle node. Keep track of the node befor
 - **Time:** O(n)
 - **Auxiliary space:** O(1)
 
+### 1621 — Number of Sets of K Non-Overlapping Line Segments
+
+The number of valid ways is the combination C(n + k - 1, 2k). Each segment contributes two endpoints, and allowing segments to share endpoints is accounted for by the k - 1 extra positions in the combination. Compute the combination using factorials and modular inverse under 10^9 + 7.
+
+- **Time:** O(n + k + log MOD)
+- **Auxiliary space:** O(n + k)
+
 ### 3271 — Hash Divided String
 
 Split the string into chunks of length `k`. For each chunk, sum each character's zero-based alphabet index, take the sum modulo 26, and convert the result back to a lowercase letter.
@@ -209,13 +217,6 @@ Group each value by its diagonal index, `row + column`. Visit rows from bottom t
 
 - **Time:** O(N), where N is the total number of elements
 - **Auxiliary space:** O(N) for the diagonal groups and result
-
-### 1621 — Number of Sets of K Non-Overlapping Line Segments
-
-The number of valid ways is the combination C(n + k - 1, 2k). Each segment contributes two endpoints, and allowing segments to share endpoints is accounted for by the k - 1 extra positions in the combination. Compute the combination using factorials and modular inverse under 10^9 + 7.
-
-- **Time:** O(n + k + log MOD)
-- **Auxiliary space:** O(n + k)
 
 ## Goal
 
