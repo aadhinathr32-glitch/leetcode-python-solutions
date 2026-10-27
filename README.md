@@ -21,6 +21,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 2095 | Delete the Middle Node of a Linked List | Medium | [Python](2095-delete-the-middle-node-of-a-linked-list.py) |
 | 1621 | Number of Sets of K Non-Overlapping Line Segments | Hard | [Python](1621-number-of-sets-of-k-non-overlapping-line-segments.py) |
 | 3271 | Hash Divided String | Easy | [Python](3271-hash-divided-string.py) |
+| 1010 | Pairs of Songs With Total Durations Divisible by 60 | Medium | [Python](1010-pairs-of-songs-with-total-durations-divisible-by-60.py) |
 | 3462 | Maximum Sum With at Most K Elements | Medium | [Python](3462-maximum-sum-with-at-most-k-elements.py) |
 | 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
@@ -50,6 +51,7 @@ python 791-custom-sort-string.py
 python 2095-delete-the-middle-node-of-a-linked-list.py
 python 1621-number-of-sets-of-k-non-overlapping-line-segments.py
 python 3271-hash-divided-string.py
+python 1010-pairs-of-songs-with-total-durations-divisible-by-60.py
 python 3462-maximum-sum-with-at-most-k-elements.py
 python 1124-longest-well-performing-interval.py
 python minimum-cost-to-make-arrays-identical.py
@@ -168,6 +170,13 @@ Split the string into chunks of length `k`. For each chunk, sum each character's
 
 - **Time:** O(n)
 - **Auxiliary space:** O(n) for the result
+
+### 1010 — Pairs of Songs With Total Durations Divisible by 60
+
+Count song durations by their remainder modulo 60. For each song, add the number of previously seen songs with the complementary remainder needed to make the pair divisible by 60, then record the current remainder. This counts each pair exactly once.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(1), using a fixed array of 60 remainder counts
 
 ### 3462 — Maximum Sum With at Most K Elements
 
