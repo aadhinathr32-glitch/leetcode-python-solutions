@@ -17,6 +17,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 1029 | Two City Scheduling | Medium | [Python](1029-two-city-scheduling.py) |
 | 841 | Keys and Rooms | Medium | [Python](841-keys-and-rooms.py) |
 | 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
+| 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
 | — | Minimum Cost to Make Arrays Identical | Medium | [Python](minimum-cost-to-make-arrays-identical.py) |
 | 3868 | Minimum Cost to Equalize Arrays Using Swaps | Medium | [Python](3868-minimum-cost-to-equalize-arrays-using-swaps.py) |
 | 1424 | Diagonal Traverse II | Medium | [Python](1424-diagonal-traverse-ii.py) |
@@ -40,6 +41,7 @@ python 1105-filling-bookcase-shelves.py
 python 1029-two-city-scheduling.py
 python 841-keys-and-rooms.py
 python 368-largest-divisible-subset.py
+python 1124-longest-well-performing-interval.py
 python minimum-cost-to-make-arrays-identical.py
 python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
 python 1424-diagonal-traverse-ii.py
@@ -127,6 +129,13 @@ Use an iterative depth-first search starting from room 0. Track visited rooms in
 Sort the numbers, then use dynamic programming. For each number, record the length of the largest divisible subset ending there and the previous number that extends that subset. Follow the parent links from the longest endpoint to reconstruct one valid subset.
 
 - **Time:** O(n²)
+- **Auxiliary space:** O(n)
+
+### 1124 — Longest Well-Performing Interval
+
+Convert each day into `+1` if it is tiring (more than 8 hours) or `-1` otherwise. A positive prefix sum means the interval from day 0 is well-performing. Otherwise, use the earliest index of a prefix sum one lower to find the longest valid interval ending at the current day.
+
+- **Time:** O(n)
 - **Auxiliary space:** O(n)
 
 ### 779 — K-th Symbol in Grammar
