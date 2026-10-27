@@ -19,6 +19,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 368 | Largest Divisible Subset | Medium | [Python](368-largest-divisible-subset.py) |
 | 791 | Custom Sort String | Medium | [Python](791-custom-sort-string.py) |
 | 2095 | Delete the Middle Node of a Linked List | Medium | [Python](2095-delete-the-middle-node-of-a-linked-list.py) |
+| 1621 | Number of Sets of K Non-Overlapping Line Segments | Hard | [Python](1621-number-of-sets-of-k-non-overlapping-line-segments.py) |
 | 3271 | Hash Divided String | Easy | [Python](3271-hash-divided-string.py) |
 | 3462 | Maximum Sum With at Most K Elements | Medium | [Python](3462-maximum-sum-with-at-most-k-elements.py) |
 | 1124 | Longest Well-Performing Interval | Medium | [Python](1124-longest-well-performing-interval.py) |
@@ -208,6 +209,13 @@ Group each value by its diagonal index, `row + column`. Visit rows from bottom t
 
 - **Time:** O(N), where N is the total number of elements
 - **Auxiliary space:** O(N) for the diagonal groups and result
+
+### 1621 — Number of Sets of K Non-Overlapping Line Segments
+
+The number of valid ways is the combination C(n + k - 1, 2k). Each segment contributes two endpoints, and allowing segments to share endpoints is accounted for by the k - 1 extra positions in the combination. Compute the combination using factorials and modular inverse under 10^9 + 7.
+
+- **Time:** O(n + k + log MOD)
+- **Auxiliary space:** O(n + k)
 
 ## Goal
 
