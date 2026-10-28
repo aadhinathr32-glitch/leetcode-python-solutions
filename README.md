@@ -5,7 +5,8 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 ## Problems
 
 | # | Problem | Difficulty | Solution |
-|---|---|---|---|\n| 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
+|---|---|---|---|
+| 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
 | 3918 | Sum of Primes Between Number and Its Reverse | Medium | [Python](3918-sum-of-primes-between-number-and-its-reverse.py) |
 | 3071 | Minimum Operations to Write the Letter Y on a Grid | Medium | [Python](3071-minimum-operations-to-write-the-letter-y-on-a-grid.py) |
 | 3458 | Select K Disjoint Special Substrings | Medium | [Python](3458-select-k-disjoint-special-substrings.py) |
@@ -40,7 +41,8 @@ Run standalone solutions from the repository directory:
 
 ```bash
 python 310-minimum-height-trees.py
-python 3918-sum-of-primes-between-number-and-its-reverse.py\npython 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
+python 3918-sum-of-primes-between-number-and-its-reverse.py
+python 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
 python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
