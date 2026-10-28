@@ -7,6 +7,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
 | 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
+| 1642 | Furthest Building You Can Reach | Medium | [Python](1642-furthest-building-you-can-reach.py) |
 | 3918 | Sum of Primes Between Number and Its Reverse | Medium | [Python](3918-sum-of-primes-between-number-and-its-reverse.py) |
 | 3071 | Minimum Operations to Write the Letter Y on a Grid | Medium | [Python](3071-minimum-operations-to-write-the-letter-y-on-a-grid.py) |
 | 3458 | Select K Disjoint Special Substrings | Medium | [Python](3458-select-k-disjoint-special-substrings.py) |
@@ -41,6 +42,7 @@ Run standalone solutions from the repository directory:
 
 ```bash
 python 310-minimum-height-trees.py
+python 1642-furthest-building-you-can-reach.py
 python 3918-sum-of-primes-between-number-and-its-reverse.py
 python 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
 python 3458-select-k-disjoint-special-substrings.py
@@ -77,6 +79,13 @@ Reverse the digits of `n` to determine the inclusive range between the smaller a
 
 - **Time:** O(R√R), where R is the larger endpoint of the range
 - **Auxiliary space:** O(1)
+
+### 1642 — Furthest Building You Can Reach
+
+Use a min-heap to track upward climbs. Initially treat each climb as ladder-covered; whenever climbs exceed the number of ladders, use bricks for the smallest climb. If bricks run out, the previous building is the furthest reachable one.
+
+- **Time:** O(n log n)
+- **Auxiliary space:** O(n)
 
 ### 310 — Minimum Height Trees
 
