@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3071 | Minimum Operations to Write the Letter Y on a Grid | Medium | [Python](3071-minimum-operations-to-write-the-letter-y-on-a-grid.py) |
 | 3458 | Select K Disjoint Special Substrings | Medium | [Python](3458-select-k-disjoint-special-substrings.py) |
 | 2289 | Steps to Make Array Non-decreasing | Medium | [Python](2289-steps-to-make-array-non-decreasing.py) |
 | 449 | Serialize and Deserialize BST | Medium | [Python](449-serialize-and-deserialize-bst.py) |
@@ -37,6 +38,7 @@ Requires Python 3.9 or newer.
 Run standalone solutions from the repository directory:
 
 ```bash
+python 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
 python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
@@ -64,6 +66,13 @@ python 78-subsets.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 3071 — Minimum Operations to Write the Letter Y on a Grid
+
+Count the occurrences of each value (0, 1, or 2) inside the Y and outside it. Try every pair of different target values for the Y and the remaining cells; choose the pair that preserves the most existing cells, minimizing changes.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(1), using two arrays of three counters
 
 ### 3458 — Select K Disjoint Special Substrings
 
