@@ -7,6 +7,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
 | 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
+| 1305 | All Elements in Two Binary Search Trees | Medium | [Python](1305-all-elements-in-two-binary-search-trees.py) |
 | 1642 | Furthest Building You Can Reach | Medium | [Python](1642-furthest-building-you-can-reach.py) |
 | 3918 | Sum of Primes Between Number and Its Reverse | Medium | [Python](3918-sum-of-primes-between-number-and-its-reverse.py) |
 | 3071 | Minimum Operations to Write the Letter Y on a Grid | Medium | [Python](3071-minimum-operations-to-write-the-letter-y-on-a-grid.py) |
@@ -42,6 +43,7 @@ Run standalone solutions from the repository directory:
 
 ```bash
 python 310-minimum-height-trees.py
+python 1305-all-elements-in-two-binary-search-trees.py
 python 1642-furthest-building-you-can-reach.py
 python 3918-sum-of-primes-between-number-and-its-reverse.py
 python 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
@@ -86,6 +88,13 @@ Use a min-heap to track upward climbs. Initially treat each climb as ladder-cove
 
 - **Time:** O(n log n)
 - **Auxiliary space:** O(n)
+
+### 1305 — All Elements in Two Binary Search Trees
+
+Perform an inorder traversal of each BST to produce two sorted lists, then merge the lists in ascending order. This preserves duplicate values and also handles an empty tree.
+
+- **Time:** O(n + m), where n and m are the numbers of nodes in the two trees
+- **Auxiliary space:** O(n + m) for the traversal lists and merged result
 
 ### 310 — Minimum Height Trees
 
