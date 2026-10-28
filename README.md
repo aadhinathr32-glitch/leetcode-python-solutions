@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|\n| 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
+| 3918 | Sum of Primes Between Number and Its Reverse | Medium | [Python](3918-sum-of-primes-between-number-and-its-reverse.py) |
 | 3071 | Minimum Operations to Write the Letter Y on a Grid | Medium | [Python](3071-minimum-operations-to-write-the-letter-y-on-a-grid.py) |
 | 3458 | Select K Disjoint Special Substrings | Medium | [Python](3458-select-k-disjoint-special-substrings.py) |
 | 2289 | Steps to Make Array Non-decreasing | Medium | [Python](2289-steps-to-make-array-non-decreasing.py) |
@@ -38,7 +39,8 @@ Requires Python 3.9 or newer.
 Run standalone solutions from the repository directory:
 
 ```bash
-python 310-minimum-height-trees.py\npython 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
+python 310-minimum-height-trees.py
+python 3918-sum-of-primes-between-number-and-its-reverse.py\npython 3071-minimum-operations-to-write-the-letter-y-on-a-grid.py
 python 3458-select-k-disjoint-special-substrings.py
 python 2289-steps-to-make-array-non-decreasing.py
 python 1155-number-of-dice-rolls-with-target-sum.py
@@ -66,6 +68,13 @@ python 78-subsets.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 3918 — Sum of Primes Between Number and Its Reverse
+
+Reverse the digits of `n` to determine the inclusive range between the smaller and larger number. Check each number in that range for primality by testing divisors up to its square root, and add the primes to the total.
+
+- **Time:** O(R√R), where R is the larger endpoint of the range
+- **Auxiliary space:** O(1)
 
 ### 310 — Minimum Height Trees
 
