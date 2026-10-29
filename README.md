@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2947 | Count Beautiful Substrings I | Medium | [Python](2947-count-beautiful-substrings-i.py) |
 | 2139 | Minimum Moves to Reach Target Score | Medium | [Python](2139-minimum-moves-to-reach-target-score.py) |
 | 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
 | 1305 | All Elements in Two Binary Search Trees | Medium | [Python](1305-all-elements-in-two-binary-search-trees.py) |
@@ -39,7 +40,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 ## How to run
 
 ```bash
-python 2139-minimum-moves-to-reach-target-score.py
+python 2947-count-beautiful-substrings-i.py
 ```
 
 
@@ -48,6 +49,7 @@ Requires Python 3.9 or newer.
 Run standalone solutions from the repository directory:
 
 ```bash
+python 2947-count-beautiful-substrings-i.py
 python 310-minimum-height-trees.py
 python 1305-all-elements-in-two-binary-search-trees.py
 python 1642-furthest-building-you-can-reach.py
@@ -80,6 +82,13 @@ python 78-subsets.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 2947 — Count Beautiful Substrings I
+
+Enumerate all substrings and maintain vowel and consonant counts as the end index moves. Count a substring when both counts are equal and their product is divisible by `k`.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(1)
 
 ### 2139 — Minimum Moves to Reach Target Score
 
