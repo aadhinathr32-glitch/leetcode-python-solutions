@@ -1,11 +1,12 @@
-# LeetCode Python Solutions
+# LeetCode Solutions
 
-A collection of Python solutions to LeetCode problems, with explanations, complexity analysis, and example tests.
+A collection of LeetCode solutions in Python and SQL, with explanations, complexity analysis, and example tests.
 
 ## Problems
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3521 | Find Product Recommendation Pairs | Medium | [SQL](sql/3521-find-product-recommendation-pairs.sql) |
 | 2947 | Count Beautiful Substrings I | Medium | [Python](2947-count-beautiful-substrings-i.py) |
 | 2139 | Minimum Moves to Reach Target Score | Medium | [Python](2139-minimum-moves-to-reach-target-score.py) |
 | 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
@@ -44,7 +45,7 @@ python 2947-count-beautiful-substrings-i.py
 ```
 
 
-Requires Python 3.9 or newer.
+Python solutions require Python 3.9 or newer. The SQL solution is written for MySQL and can be run in a MySQL-compatible SQL editor.
 
 Run standalone solutions from the repository directory:
 
@@ -81,7 +82,16 @@ python 78-subsets.py
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
-## Approaches
+## SQL Solutions
+
+### 3521 — Find Product Recommendation Pairs
+
+Self-join `ProductPurchases` on `user_id` to pair products bought by the same customer. Keep only pairs where the first product ID is smaller, join `ProductInfo` twice to retrieve both categories, group by the product pair, and retain pairs bought by at least three distinct customers. Sort by customer count descending, then product IDs ascending.
+
+- **Time:** O(P²) in the worst case per customer’s purchases, where P is the total number of purchase rows; the join workload depends on how many products each customer purchased
+- **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
+
+## Python Approaches
 
 ### 2947 — Count Beautiful Substrings I
 
