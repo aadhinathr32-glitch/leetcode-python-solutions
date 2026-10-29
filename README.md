@@ -6,6 +6,7 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2139 | Minimum Moves to Reach Target Score | Medium | [Python](2139-minimum-moves-to-reach-target-score.py) |
 | 310 | Minimum Height Trees | Medium | [Python](310-minimum-height-trees.py) |
 | 1305 | All Elements in Two Binary Search Trees | Medium | [Python](1305-all-elements-in-two-binary-search-trees.py) |
 | 1642 | Furthest Building You Can Reach | Medium | [Python](1642-furthest-building-you-can-reach.py) |
@@ -36,6 +37,11 @@ A collection of Python solutions to LeetCode problems, with explanations, comple
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 
 ## How to run
+
+```bash
+python 2139-minimum-moves-to-reach-target-score.py
+```
+
 
 Requires Python 3.9 or newer.
 
@@ -74,6 +80,14 @@ python 78-subsets.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Approaches
+
+### 2139 — Minimum Moves to Reach Target Score
+
+Work backward from `target`: halve it when it is even and a double remains; otherwise subtract one to reverse an increment. Once no doubles remain, add all remaining increments (`target - 1`).
+
+- **Time:** O(log target)
+- **Auxiliary space:** O(1)
+
 
 ### 3918 — Sum of Primes Between Number and Its Reverse
 
