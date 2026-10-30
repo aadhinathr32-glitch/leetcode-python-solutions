@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3649 | Number of Perfect Pairs | Medium | [Python](3649-number-of-perfect-pairs.py) |
 | 3521 | Find Product Recommendation Pairs | Medium | [SQL](sql/3521-find-product-recommendation-pairs.sql) |
 | 2947 | Count Beautiful Substrings I | Medium | [Python](2947-count-beautiful-substrings-i.py) |
 | 2139 | Minimum Moves to Reach Target Score | Medium | [Python](2139-minimum-moves-to-reach-target-score.py) |
@@ -41,6 +42,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3649-number-of-perfect-pairs.py
 python 2947-count-beautiful-substrings-i.py
 ```
 
@@ -92,6 +94,14 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3649 — Number of Perfect Pairs
+
+Convert every number to its absolute value and sort the resulting array. For a sorted pair with smaller value `x` and larger value `y`, the original conditions simplify to `y <= 2 * x`. Maintain a sliding window with two pointers; for each right endpoint, all earlier values from `left` through `right - 1` form valid pairs, so add `right - left` to the answer.
+
+- **Time:** O(n log n) for sorting, followed by O(n) for the two-pointer scan
+- **Auxiliary space:** O(n) for the sorted absolute-value array
+
 
 ### 2947 — Count Beautiful Substrings I
 
