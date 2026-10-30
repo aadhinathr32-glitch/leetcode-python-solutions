@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1400 | Construct K Palindrome Strings | Medium | [Python](1400-construct-k-palindrome-strings.py) |
 | 1343 | Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold | Medium | [Python](1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py) |
 | 3649 | Number of Perfect Pairs | Medium | [Python](3649-number-of-perfect-pairs.py) |
 | 3521 | Find Product Recommendation Pairs | Medium | [SQL](sql/3521-find-product-recommendation-pairs.sql) |
@@ -96,6 +97,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1400 — Construct K Palindrome Strings
+
+First check that the string contains at least `k` characters so every palindrome can be non-empty. Count the frequency of each lowercase letter and count how many frequencies are odd. Each palindrome can contain at most one odd-frequency character, so construction is possible exactly when the odd-frequency count is at most `k`.
+
+- **Time:** O(n), scanning the string and the fixed 26-letter frequency array
+- **Auxiliary space:** O(1), using a fixed-size frequency array
 
 ### 1343 — Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
 
