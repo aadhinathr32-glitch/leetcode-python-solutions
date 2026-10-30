@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1343 | Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold | Medium | [Python](1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py) |
 | 3649 | Number of Perfect Pairs | Medium | [Python](3649-number-of-perfect-pairs.py) |
 | 3521 | Find Product Recommendation Pairs | Medium | [SQL](sql/3521-find-product-recommendation-pairs.sql) |
 | 2947 | Count Beautiful Substrings I | Medium | [Python](2947-count-beautiful-substrings-i.py) |
@@ -42,6 +43,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py
 python 3649-number-of-perfect-pairs.py
 python 2947-count-beautiful-substrings-i.py
 ```
@@ -94,6 +96,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1343 — Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+
+Use a fixed-size sliding window. Compare each window's sum with `k * threshold` instead of calculating its average. When the window moves, add the incoming element and subtract the outgoing element.
+
+- **Time:** O(n), because each element enters and leaves the window at most once
+- **Auxiliary space:** O(1)
 
 ### 3649 — Number of Perfect Pairs
 
