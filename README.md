@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 59 | Spiral Matrix II | Medium | [Python](59-spiral-matrix-ii.py) |
 | 3723 | Maximize Sum of Squares of Digits | Medium | [Python](3723-maximize-sum-of-squares-of-digits.py) |
 | 784 | Letter Case Permutation | Medium | [Python](784-letter-case-permutation.py) |
 | 1400 | Construct K Palindrome Strings | Medium | [Python](1400-construct-k-palindrome-strings.py) |
@@ -46,6 +47,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 59-spiral-matrix-ii.py
 python 3723-maximize-sum-of-squares-of-digits.py
 python 1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py
 python 3649-number-of-perfect-pairs.py
@@ -87,6 +89,7 @@ python 1424-diagonal-traverse-ii.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
 python 3723-maximize-sum-of-squares-of-digits.py
+python 59-spiral-matrix-ii.py
 ```
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
@@ -101,6 +104,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 59 — Spiral Matrix II
+
+Create an `n × n` matrix and fill it one layer at a time using four boundaries: `top`, `bottom`, `left`, and `right`. Traverse left to right, top to bottom, right to left, and bottom to top, shrinking the corresponding boundary after each pass. Check the remaining boundaries before the reverse traversals to avoid filling cells twice.
+
+- **Time:** O(n²), because every cell is filled exactly once
+- **Auxiliary space:** O(n²), for the output matrix
 
 ### 3723 — Maximize Sum of Squares of Digits
 
