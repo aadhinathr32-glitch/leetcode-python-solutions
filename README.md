@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 784 | Letter Case Permutation | Medium | [Python](784-letter-case-permutation.py) |
 | 1400 | Construct K Palindrome Strings | Medium | [Python](1400-construct-k-palindrome-strings.py) |
 | 1343 | Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold | Medium | [Python](1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py) |
 | 3649 | Number of Perfect Pairs | Medium | [Python](3649-number-of-perfect-pairs.py) |
@@ -97,6 +98,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 784 — Letter Case Permutation
+
+Use backtracking to build each possible string. For a digit, keep the character unchanged and move to the next index. For a letter, explore both lowercase and uppercase choices, undoing each choice after the recursive call. Add the completed string when every character has been processed.
+
+- **Time:** O(n × 2ᵐ), where `m` is the number of letters and `n` is the string length, including the cost of storing each result
+- **Auxiliary space:** O(n × 2ᵐ) for the result list; O(n) recursion and working space
 
 ### 1400 — Construct K Palindrome Strings
 
