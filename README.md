@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3723 | Maximize Sum of Squares of Digits | Medium | [Python](3723-maximize-sum-of-squares-of-digits.py) |
 | 784 | Letter Case Permutation | Medium | [Python](784-letter-case-permutation.py) |
 | 1400 | Construct K Palindrome Strings | Medium | [Python](1400-construct-k-palindrome-strings.py) |
 | 1343 | Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold | Medium | [Python](1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py) |
@@ -45,6 +46,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3723-maximize-sum-of-squares-of-digits.py
 python 1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py
 python 3649-number-of-perfect-pairs.py
 python 2947-count-beautiful-substrings-i.py
@@ -84,6 +86,7 @@ python 3868-minimum-cost-to-equalize-arrays-using-swaps.py
 python 1424-diagonal-traverse-ii.py
 python 779-k-th-symbol-in-grammar.py
 python 78-subsets.py
+python 3723-maximize-sum-of-squares-of-digits.py
 ```
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
@@ -98,6 +101,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3723 — Maximize Sum of Squares of Digits
+
+If `sum` is greater than `9 * num`, no valid number can be formed, so return an empty string. Otherwise, use as many `9` digits as possible (`sum // 9`), append the remaining digit if it is non-zero (`sum % 9`), and pad the remaining positions with zeroes. Concentrating the digit sum into the largest possible digits maximizes the sum of squares; placing digits in descending order gives the maximum number when scores tie.
+
+- **Time:** O(num), to build the result string
+- **Auxiliary space:** O(num), for the result string
 
 ### 784 — Letter Case Permutation
 
