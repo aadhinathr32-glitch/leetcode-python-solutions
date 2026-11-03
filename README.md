@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1405 | Longest Happy String | Medium | [Python](1405-longest-happy-string.py) |
 | 2109 | Adding Spaces to a String | Medium | [Python](2109-adding-spaces-to-a-string.py) |
 | 606 | Construct String from Binary Tree | Medium | [Python](606-construct-string-from-binary-tree.py) |
 | 677 | Map Sum Pairs | Medium | [Python](677-map-sum-pairs.py) |
@@ -50,6 +51,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1405-longest-happy-string.py
 python 2109-adding-spaces-to-a-string.py
 python 606-construct-string-from-binary-tree.py
 python 677-map-sum-pairs.py
@@ -110,6 +112,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1405 — Longest Happy String
+
+Use a max heap (implemented with negative frequencies) to repeatedly select the character with the largest remaining count. If selecting it would create three identical consecutive characters, use the next most frequent character instead and put the first character back into the heap. Stop when no valid alternative remains.
+
+- **Time:** O((a + b + c) log 3), effectively O(a + b + c) because the heap contains at most three characters
+- **Auxiliary space:** O(a + b + c) for the result; O(1) for the heap
 
 ### 2109 — Adding Spaces to a String
 
