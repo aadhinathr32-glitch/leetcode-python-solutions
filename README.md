@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2109 | Adding Spaces to a String | Medium | [Python](2109-adding-spaces-to-a-string.py) |
 | 606 | Construct String from Binary Tree | Medium | [Python](606-construct-string-from-binary-tree.py) |
 | 677 | Map Sum Pairs | Medium | [Python](677-map-sum-pairs.py) |
 | 59 | Spiral Matrix II | Medium | [Python](59-spiral-matrix-ii.py) |
@@ -49,6 +50,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2109-adding-spaces-to-a-string.py
 python 606-construct-string-from-binary-tree.py
 python 677-map-sum-pairs.py
 python 59-spiral-matrix-ii.py
@@ -108,6 +110,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2109 — Adding Spaces to a String
+
+Traverse the original string from left to right while keeping a pointer into the sorted `spaces` array. Before appending each character, check whether its index matches the next space position. If it does, append a space and advance the pointer. Join the character list at the end to build the modified string efficiently.
+
+- **Time:** O(n + m), where n is the string length and m is the number of insertion positions
+- **Auxiliary space:** O(n + m) for the result list and output string
 
 ### 606 — Construct String from Binary Tree
 
