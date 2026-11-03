@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 606 | Construct String from Binary Tree | Medium | [Python](606-construct-string-from-binary-tree.py) |
 | 677 | Map Sum Pairs | Medium | [Python](677-map-sum-pairs.py) |
 | 59 | Spiral Matrix II | Medium | [Python](59-spiral-matrix-ii.py) |
 | 3723 | Maximize Sum of Squares of Digits | Medium | [Python](3723-maximize-sum-of-squares-of-digits.py) |
@@ -48,6 +49,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 606-construct-string-from-binary-tree.py
 python 677-map-sum-pairs.py
 python 59-spiral-matrix-ii.py
 python 3723-maximize-sum-of-squares-of-digits.py
@@ -106,6 +108,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 606 — Construct String from Binary Tree
+
+Use preorder recursion (root, left, right). Return the node value directly for a leaf. If only a left child exists, append its representation in parentheses. If only a right child exists, include `()` before the right child to preserve the missing-left-child position. If both children exist, append the left and right representations in separate parentheses.
+
+- **Time:** O(n), visiting each node once (excluding output-string construction costs)
+- **Auxiliary space:** O(h) for the recursion stack, where h is the tree height
 
 ### 677 — Map Sum Pairs
 
