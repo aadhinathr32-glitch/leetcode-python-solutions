@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 677 | Map Sum Pairs | Medium | [Python](677-map-sum-pairs.py) |
 | 59 | Spiral Matrix II | Medium | [Python](59-spiral-matrix-ii.py) |
 | 3723 | Maximize Sum of Squares of Digits | Medium | [Python](3723-maximize-sum-of-squares-of-digits.py) |
 | 784 | Letter Case Permutation | Medium | [Python](784-letter-case-permutation.py) |
@@ -47,6 +48,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 677-map-sum-pairs.py
 python 59-spiral-matrix-ii.py
 python 3723-maximize-sum-of-squares-of-digits.py
 python 1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py
@@ -104,6 +106,14 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 677 — Map Sum Pairs
+
+Store each key and its current value in a dictionary. For `sum(prefix)`, iterate through the stored keys and add the values for keys that start with the given prefix. Assigning to an existing dictionary key automatically replaces its previous value, so updates are handled correctly.
+
+- **Insert time:** O(1) average
+- **Sum time:** O(N × L), where N is the number of stored keys and L is the average key length (for prefix checking)
+- **Auxiliary space:** O(N × L) for the stored keys and values
 
 ### 59 — Spiral Matrix II
 
