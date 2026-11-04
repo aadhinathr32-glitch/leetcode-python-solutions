@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3719 | Longest Balanced Subarray I | Medium | [Python](3719-longest-balanced-subarray-i.py) |
 | 893 | Groups of Special-Equivalent Strings | Medium | [Python](893-groups-of-special-equivalent-strings.py) |
 | 1405 | Longest Happy String | Medium | [Python](1405-longest-happy-string.py) |
 | 2109 | Adding Spaces to a String | Medium | [Python](2109-adding-spaces-to-a-string.py) |
@@ -52,6 +53,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3719-longest-balanced-subarray-i.py
 python 893-groups-of-special-equivalent-strings.py
 python 1405-longest-happy-string.py
 python 2109-adding-spaces-to-a-string.py
@@ -114,6 +116,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3719 — Longest Balanced Subarray I
+
+Enumerate every starting index and extend the subarray one element at a time. Maintain separate sets for distinct even and odd values, adding each new value to the appropriate set. Whenever the two set sizes match, update the maximum subarray length. Sets ensure repeated values are counted only once.
+
+- **Time:** O(n²) average, since there are O(n²) subarrays and set insertion is O(1) average
+- **Auxiliary space:** O(n) for the two sets
 
 ### 893 — Groups of Special-Equivalent Strings
 
