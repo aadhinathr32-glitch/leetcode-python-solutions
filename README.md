@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 893 | Groups of Special-Equivalent Strings | Medium | [Python](893-groups-of-special-equivalent-strings.py) |
 | 1405 | Longest Happy String | Medium | [Python](1405-longest-happy-string.py) |
 | 2109 | Adding Spaces to a String | Medium | [Python](2109-adding-spaces-to-a-string.py) |
 | 606 | Construct String from Binary Tree | Medium | [Python](606-construct-string-from-binary-tree.py) |
@@ -51,6 +52,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 893-groups-of-special-equivalent-strings.py
 python 1405-longest-happy-string.py
 python 2109-adding-spaces-to-a-string.py
 python 606-construct-string-from-binary-tree.py
@@ -112,6 +114,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 893 — Groups of Special-Equivalent Strings
+
+For each word, separate the characters at even and odd indices, then sort each group. Use the pair of sorted groups as a tuple signature and add it to a set. Words with the same signature are special-equivalent because characters can be rearranged freely within their respective index parity groups. The number of unique signatures is the number of groups.
+
+- **Time:** O(N × K log K), where N is the number of words and K is the length of each word
+- **Auxiliary space:** O(N × K) for the stored signatures
 
 ### 1405 — Longest Happy String
 
