@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2087 | Minimum Cost Homecoming of a Robot in a Grid | Medium | [Python](2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py) |
 | 3 | Longest Substring Without Repeating Characters | Medium | [Python](3-longest-substring-without-repeating-characters.py) |
 | 3896 | Minimum Operations to Transform Array into Alternating Prime | Medium | [Python](3896-minimum-operations-to-transform-array-into-alternating-prime.py) |
 | 3756 | Concatenate Non-Zero Digits and Multiply by Sum II | Medium | [Python](3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py) |
@@ -56,6 +57,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py
 python 3-longest-substring-without-repeating-characters.py
 python 3896-minimum-operations-to-transform-array-into-alternating-prime.py
 python 3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py
@@ -122,6 +124,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2087 — Minimum Cost Homecoming of a Robot in a Grid
+
+Move directly toward the home position: first traverse the required rows and then the required columns. Every vertical move enters a row and costs that row's `rowCosts` value; every horizontal move enters a column and costs that column's `colCosts` value. There is no benefit to detouring because all movement costs are non-negative, so the direct path is optimal.
+
+- **Time:** O(|startrow - homerow| + |startcol - homecol|)
+- **Auxiliary space:** O(1)
 
 ### 3 — Longest Substring Without Repeating Characters
 
