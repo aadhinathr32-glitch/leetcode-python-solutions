@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3 | Longest Substring Without Repeating Characters | Medium | [Python](3-longest-substring-without-repeating-characters.py) |
 | 3896 | Minimum Operations to Transform Array into Alternating Prime | Medium | [Python](3896-minimum-operations-to-transform-array-into-alternating-prime.py) |
 | 3756 | Concatenate Non-Zero Digits and Multiply by Sum II | Medium | [Python](3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py) |
 | 3719 | Longest Balanced Subarray I | Medium | [Python](3719-longest-balanced-subarray-i.py) |
@@ -55,6 +56,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3-longest-substring-without-repeating-characters.py
 python 3896-minimum-operations-to-transform-array-into-alternating-prime.py
 python 3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py
 python 3719-longest-balanced-subarray-i.py
@@ -120,6 +122,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3 — Longest Substring Without Repeating Characters
+
+Use a sliding window with two pointers and a dictionary storing the latest index of each character. When a duplicate character appears inside the current window, move the left pointer just after its previous occurrence. Track the maximum window length throughout the scan.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 3896 — Minimum Operations to Transform Array into Alternating Prime
 
