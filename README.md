@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3756 | Concatenate Non-Zero Digits and Multiply by Sum II | Medium | [Python](3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py) |
 | 3719 | Longest Balanced Subarray I | Medium | [Python](3719-longest-balanced-subarray-i.py) |
 | 893 | Groups of Special-Equivalent Strings | Medium | [Python](893-groups-of-special-equivalent-strings.py) |
 | 1405 | Longest Happy String | Medium | [Python](1405-longest-happy-string.py) |
@@ -53,6 +54,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py
 python 3719-longest-balanced-subarray-i.py
 python 893-groups-of-special-equivalent-strings.py
 python 1405-longest-happy-string.py
@@ -116,6 +118,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3756 — Concatenate Non-Zero Digits and Multiply by Sum II
+
+Precompute three prefix arrays: the sum of non-zero digits, the number of non-zero digits, and the numeric value formed by concatenating non-zero digits. For a query `[left, right]`, subtract the prefix values to get the digit sum and count in the range. Use the count to remove the digits before `left` from the concatenated value with modular exponentiation, then multiply the resulting number by its digit sum modulo `10^9 + 7`.
+
+- **Time:** O(m + q log m), where m is the string length and q is the number of queries
+- **Auxiliary space:** O(m)
 
 ### 3719 — Longest Balanced Subarray I
 
