@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1492 | The kth Factor of n | Medium | [Python](1492-the-kth-factor-of-n.py) |
 | 2087 | Minimum Cost Homecoming of a Robot in a Grid | Medium | [Python](2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py) |
 | 3 | Longest Substring Without Repeating Characters | Medium | [Python](3-longest-substring-without-repeating-characters.py) |
 | 3896 | Minimum Operations to Transform Array into Alternating Prime | Medium | [Python](3896-minimum-operations-to-transform-array-into-alternating-prime.py) |
@@ -57,6 +58,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1492-the-kth-factor-of-n.py
 python 2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py
 python 3-longest-substring-without-repeating-characters.py
 python 3896-minimum-operations-to-transform-array-into-alternating-prime.py
@@ -124,6 +126,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1492 — The kth Factor of n
+
+Check divisors only up to `sqrt(n)`. Whenever `i` divides `n`, both `i` and its paired factor `n // i` are factors. Store the factors, sort them in ascending order, and return the `k`th one if it exists; otherwise return `-1`.
+
+- **Time:** O(√n log √n)
+- **Auxiliary space:** O(√n)
 
 ### 2087 — Minimum Cost Homecoming of a Robot in a Grid
 
