@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3896 | Minimum Operations to Transform Array into Alternating Prime | Medium | [Python](3896-minimum-operations-to-transform-array-into-alternating-prime.py) |
 | 3756 | Concatenate Non-Zero Digits and Multiply by Sum II | Medium | [Python](3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py) |
 | 3719 | Longest Balanced Subarray I | Medium | [Python](3719-longest-balanced-subarray-i.py) |
 | 893 | Groups of Special-Equivalent Strings | Medium | [Python](893-groups-of-special-equivalent-strings.py) |
@@ -54,6 +55,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3896-minimum-operations-to-transform-array-into-alternating-prime.py
 python 3756-concatenate-non-zero-digits-and-multiply-by-sum-ii.py
 python 3719-longest-balanced-subarray-i.py
 python 893-groups-of-special-equivalent-strings.py
@@ -118,6 +120,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3896 — Minimum Operations to Transform Array into Alternating Prime
+
+Precompute prime numbers with the Sieve of Eratosthenes. At even indices, the value must be prime, so find the smallest prime greater than or equal to the current value and add the required increments. At odd indices, the value must be non-prime: an existing non-prime costs 0 operations, prime `2` costs 2 operations (`2 → 3 → 4`), and every other prime costs 1 operation because adding 1 produces an even number greater than 2.
+
+- **Time:** O(M log log M + n log M), where M is `max(nums) + 100`
+- **Auxiliary space:** O(M)
 
 ### 3756 — Concatenate Non-Zero Digits and Multiply by Sum II
 
