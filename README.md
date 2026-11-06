@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3169 | Count Days Without Meetings | Medium | [Python](3169-count-days-without-meetings.py) |
 | 2831 | Find the Longest Equal Subarray | Medium | [Python](2831-find-the-longest-equal-subarray.py) |
 | 1861 | Rotating the Box | Medium | [Python](1861-rotating-the-box.py) |
 | 1492 | The kth Factor of n | Medium | [Python](1492-the-kth-factor-of-n.py) |
@@ -60,6 +61,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3169-count-days-without-meetings.py
 python 2831-find-the-longest-equal-subarray.py
 python 1861-rotating-the-box.py
 python 1492-the-kth-factor-of-n.py
@@ -130,6 +132,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3169 — Count Days Without Meetings
+
+Sort the meeting intervals by their start day and merge overlapping or adjacent intervals. For every merged interval `[start, end]`, the number of occupied days is `end - start + 1`. Subtract the total occupied days from `days` to get the number of days without meetings.
+
+- **Time:** O(n log n)
+- **Space:** O(1) extra space apart from sorting
 
 ### 2831 — Find the Longest Equal Subarray
 
