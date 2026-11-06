@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1861 | Rotating the Box | Medium | [Python](1861-rotating-the-box.py) |
 | 1492 | The kth Factor of n | Medium | [Python](1492-the-kth-factor-of-n.py) |
 | 2087 | Minimum Cost Homecoming of a Robot in a Grid | Medium | [Python](2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py) |
 | 3 | Longest Substring Without Repeating Characters | Medium | [Python](3-longest-substring-without-repeating-characters.py) |
@@ -58,6 +59,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1861-rotating-the-box.py
 python 1492-the-kth-factor-of-n.py
 python 2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py
 python 3-longest-substring-without-repeating-characters.py
@@ -126,6 +128,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1861 — Rotating the Box
+
+First simulate gravity before rotating the box. After a 90-degree clockwise rotation, the original horizontal direction becomes the direction of gravity, so each row can be processed independently from right to left. Keep an `empty` pointer at the rightmost available position; stones move to this position, while obstacles reset the available position to the cell immediately before them. After all stones have fallen, rotate the matrix clockwise by mapping `(r, c)` to `(c, m - 1 - r)`.
+
+- **Time:** O(m × n)
+- **Auxiliary space:** O(m × n) for the rotated result
 
 ### 1492 — The kth Factor of n
 
