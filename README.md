@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2831 | Find the Longest Equal Subarray | Medium | [Python](2831-find-the-longest-equal-subarray.py) |
 | 1861 | Rotating the Box | Medium | [Python](1861-rotating-the-box.py) |
 | 1492 | The kth Factor of n | Medium | [Python](1492-the-kth-factor-of-n.py) |
 | 2087 | Minimum Cost Homecoming of a Robot in a Grid | Medium | [Python](2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py) |
@@ -59,6 +60,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2831-find-the-longest-equal-subarray.py
 python 1861-rotating-the-box.py
 python 1492-the-kth-factor-of-n.py
 python 2087-minimum-cost-homecoming-of-a-robot-in-a-grid.py
@@ -128,6 +130,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2831 — Find the Longest Equal Subarray
+
+Group the indices of each distinct value. For one value, use a sliding window over its occurrence indices. If the window contains `right - left + 1` occurrences, the number of other elements that must be deleted is `pos[right] - pos[left] - (right - left)`. Shrink the window whenever this exceeds `k`. The number of occurrences in the largest valid window is the answer for that value.
+
+- **Time:** O(n)
+- **Space:** O(n)
 
 ### 1861 — Rotating the Box
 
