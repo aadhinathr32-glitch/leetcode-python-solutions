@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3381 | Maximum Subarray Sum With Length Divisible by K | Medium | [Python](3381-maximum-subarray-sum-with-length-divisible-by-k.py) |
 | 3169 | Count Days Without Meetings | Medium | [Python](3169-count-days-without-meetings.py) |
 | 2831 | Find the Longest Equal Subarray | Medium | [Python](2831-find-the-longest-equal-subarray.py) |
 | 1861 | Rotating the Box | Medium | [Python](1861-rotating-the-box.py) |
@@ -61,6 +62,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3381-maximum-subarray-sum-with-length-divisible-by-k.py
 python 3169-count-days-without-meetings.py
 python 2831-find-the-longest-equal-subarray.py
 python 1861-rotating-the-box.py
@@ -132,6 +134,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3381 — Maximum Subarray Sum With Length Divisible by K
+
+Use prefix sums grouped by their index remainder modulo k. A subarray from prefix index l to r has a length divisible by k exactly when l % k == r % k. For each remainder, store the smallest prefix sum seen so far. Subtracting that minimum from the current prefix sum gives the maximum valid subarray sum ending at the current index.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(k)
 
 ### 3169 — Count Days Without Meetings
 
