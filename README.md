@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2245 | Maximum Trailing Zeros in a Cornered Path | Medium | [Python](2245-maximum-trailing-zeros-in-a-cornered-path.py) |
 | 3381 | Maximum Subarray Sum With Length Divisible by K | Medium | [Python](3381-maximum-subarray-sum-with-length-divisible-by-k.py) |
 | 3169 | Count Days Without Meetings | Medium | [Python](3169-count-days-without-meetings.py) |
 | 2831 | Find the Longest Equal Subarray | Medium | [Python](2831-find-the-longest-equal-subarray.py) |
@@ -62,6 +63,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2245-maximum-trailing-zeros-in-a-cornered-path.py
 python 3381-maximum-subarray-sum-with-length-divisible-by-k.py
 python 3169-count-days-without-meetings.py
 python 2831-find-the-longest-equal-subarray.py
@@ -134,6 +136,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2245 — Maximum Trailing Zeros in a Cornered Path
+
+Count the factors of 2 and 5 in every grid cell, since the number of trailing zeros is the minimum of the two factor counts. Build row and column prefix sums so the factor counts for each of the four possible cornered paths (up-left, up-right, down-left, down-right) can be calculated in O(1). Check every cell as the turning point and keep the maximum trailing-zero count.
+
+- **Time:** O(m × n)
+- **Auxiliary space:** O(m × n)
 
 ### 3381 — Maximum Subarray Sum With Length Divisible by K
 
