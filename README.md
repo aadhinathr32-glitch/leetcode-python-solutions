@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3587 | Minimum Adjacent Swaps to Alternate Parity | Medium | [Python](3587-minimum-adjacent-swaps-to-alternate-parity.py) |
 | 2245 | Maximum Trailing Zeros in a Cornered Path | Medium | [Python](2245-maximum-trailing-zeros-in-a-cornered-path.py) |
 | 3381 | Maximum Subarray Sum With Length Divisible by K | Medium | [Python](3381-maximum-subarray-sum-with-length-divisible-by-k.py) |
 | 3169 | Count Days Without Meetings | Medium | [Python](3169-count-days-without-meetings.py) |
@@ -63,6 +64,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3587-minimum-adjacent-swaps-to-alternate-parity.py
 python 2245-maximum-trailing-zeros-in-a-cornered-path.py
 python 3381-maximum-subarray-sum-with-length-divisible-by-k.py
 python 3169-count-days-without-meetings.py
@@ -136,6 +138,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3587 — Minimum Adjacent Swaps to Alternate Parity
+
+Collect the original indices of even and odd numbers. An alternating arrangement is possible only when the counts differ by at most one. For each possible starting parity, place that parity at target indices 0, 2, 4, ... and sum the absolute movements from the original positions to those targets. This movement equals the number of adjacent swaps needed. When one parity has more elements, it must be the starting parity; when the counts are equal, take the cheaper of the two possibilities.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 2245 — Maximum Trailing Zeros in a Cornered Path
 
