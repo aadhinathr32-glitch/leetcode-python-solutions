@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2352 | Equal Row and Column Pairs | Medium | [Python](2352-equal-row-and-column-pairs.py) |
 | 3587 | Minimum Adjacent Swaps to Alternate Parity | Medium | [Python](3587-minimum-adjacent-swaps-to-alternate-parity.py) |
 | 2245 | Maximum Trailing Zeros in a Cornered Path | Medium | [Python](2245-maximum-trailing-zeros-in-a-cornered-path.py) |
 | 3381 | Maximum Subarray Sum With Length Divisible by K | Medium | [Python](3381-maximum-subarray-sum-with-length-divisible-by-k.py) |
@@ -65,6 +66,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 ```bash
 python 3587-minimum-adjacent-swaps-to-alternate-parity.py
+python 2352-equal-row-and-column-pairs.py
 python 2245-maximum-trailing-zeros-in-a-cornered-path.py
 python 3381-maximum-subarray-sum-with-length-divisible-by-k.py
 python 3169-count-days-without-meetings.py
@@ -138,6 +140,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2352 — Equal Row and Column Pairs
+
+Store every row as a tuple in a frequency dictionary. Then build each column as a tuple and look up its frequency in the dictionary. Every matching frequency contributes that many row-column pairs.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(n²)
 
 ### 3587 — Minimum Adjacent Swaps to Alternate Parity
 
