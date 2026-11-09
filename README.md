@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2121 | Intervals Between Identical Elements | Medium | [Python](2121-intervals-between-identical-elements.py) |
 | 1895 | Largest Magic Square | Medium | [Python](1895-largest-magic-square.py) |
 | 2352 | Equal Row and Column Pairs | Medium | [Python](2352-equal-row-and-column-pairs.py) |
 | 3587 | Minimum Adjacent Swaps to Alternate Parity | Medium | [Python](3587-minimum-adjacent-swaps-to-alternate-parity.py) |
@@ -66,6 +67,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2121-intervals-between-identical-elements.py
 python 1895-largest-magic-square.py
 python 3587-minimum-adjacent-swaps-to-alternate-parity.py
 python 2352-equal-row-and-column-pairs.py
@@ -142,6 +144,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2121 — Intervals Between Identical Elements
+
+Group the indices of each value. For each group, use a prefix sum of indices to calculate the total distance from the current index to all equal elements on the left and right in O(1). The left contribution is the current index times the number of earlier occurrences minus their index sum; the right contribution is the sum of later indices minus the current index times their count.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 1895 — Largest Magic Square
 
