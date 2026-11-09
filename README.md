@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2761 | Prime Pairs With Target Sum | Medium | [Python](2761-prime-pairs-with-target-sum.py) |
 | 2121 | Intervals Between Identical Elements | Medium | [Python](2121-intervals-between-identical-elements.py) |
 | 1895 | Largest Magic Square | Medium | [Python](1895-largest-magic-square.py) |
 | 2352 | Equal Row and Column Pairs | Medium | [Python](2352-equal-row-and-column-pairs.py) |
@@ -67,6 +68,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2761-prime-pairs-with-target-sum.py
 python 2121-intervals-between-identical-elements.py
 python 1895-largest-magic-square.py
 python 3587-minimum-adjacent-swaps-to-alternate-parity.py
@@ -144,6 +146,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2761 — Prime Pairs With Target Sum
+
+Use the Sieve of Eratosthenes to precompute which numbers up to `n` are prime. Then check every possible `x` from 2 through `n // 2`; its matching value is `y = n - x`. If both are prime, add `[x, y]` to the result. Iterating `x` in increasing order automatically produces the required sorted pairs.
+
+- **Time:** O(n log log n)
+- **Auxiliary space:** O(n)
 
 ### 2121 — Intervals Between Identical Elements
 
