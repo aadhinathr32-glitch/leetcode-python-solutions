@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3964 | Minimum Lights to Illuminate a Road | Medium | [Python](3964-minimum-lights-to-illuminate-a-road.py) |
 | 3153 | Sum of Digit Differences of All Pairs | Medium | [Python](3153-sum-of-digit-differences-of-all-pairs.py) |
 | 3192 | Minimum Operations to Make Binary Array Elements Equal to One II | Medium | [Python](3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py) |
 | 1958 | Check if Move is Legal | Medium | [Python](1958-check-if-move-is-legal.py) |
@@ -71,6 +72,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3964-minimum-lights-to-illuminate-a-road.py
 python 3153-sum-of-digit-differences-of-all-pairs.py
 python 3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py
 python 1958-check-if-move-is-legal.py
@@ -152,6 +154,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3964 — Minimum Lights to Illuminate a Road
+
+Use a difference array to track how many existing bulbs illuminate each position. For every working bulb, mark its illuminated range with a +1 at the start and a -1 just after the end. Then scan from left to right while maintaining the current coverage. Whenever a position is uncovered, install one additional bulb at the next position (i + 1), which covers the current position and extends two positions to the right. This greedy placement minimizes the number of additional bulbs.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 3153 — Sum of Digit Differences of All Pairs
 
