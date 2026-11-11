@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3192 | Minimum Operations to Make Binary Array Elements Equal to One II | Medium | [Python](3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py) |
 | 1958 | Check if Move is Legal | Medium | [Python](1958-check-if-move-is-legal.py) |
 | 2761 | Prime Pairs With Target Sum | Medium | [Python](2761-prime-pairs-with-target-sum.py) |
 | 2121 | Intervals Between Identical Elements | Medium | [Python](2121-intervals-between-identical-elements.py) |
@@ -69,6 +70,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py
 python 1958-check-if-move-is-legal.py
 python 2761-prime-pairs-with-target-sum.py
 python 2121-intervals-between-identical-elements.py
@@ -148,6 +150,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3192 — Minimum Operations to Make Binary Array Elements Equal to One II
+
+Scan the array from left to right while tracking whether the current suffix has been flipped an odd number of times. The actual current value is `num ^ current_flip`. Whenever it is `0`, a flip is required at that index; increment the operation count and toggle the flip state. This greedy choice is necessary because once we pass an index, we cannot change it without flipping the suffix again.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(1)
 
 ### 1958 — Check if Move is Legal
 
