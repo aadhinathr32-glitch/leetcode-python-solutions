@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3153 | Sum of Digit Differences of All Pairs | Medium | [Python](3153-sum-of-digit-differences-of-all-pairs.py) |
 | 3192 | Minimum Operations to Make Binary Array Elements Equal to One II | Medium | [Python](3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py) |
 | 1958 | Check if Move is Legal | Medium | [Python](1958-check-if-move-is-legal.py) |
 | 2761 | Prime Pairs With Target Sum | Medium | [Python](2761-prime-pairs-with-target-sum.py) |
@@ -70,6 +71,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3153-sum-of-digit-differences-of-all-pairs.py
 python 3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py
 python 1958-check-if-move-is-legal.py
 python 2761-prime-pairs-with-target-sum.py
@@ -150,6 +152,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 3153 — Sum of Digit Differences of All Pairs
+
+Process each digit position independently. Count how many numbers have each digit at that position. If a digit occurs `c` times, it differs from the other `n - c` numbers in `c * (n - c)` ordered comparisons. Summing these values over all digits and dividing by 2 gives the number of unordered pairs.
+
+- **Time:** O(n × d), where d is the number of digits
+- **Auxiliary space:** O(1)
 
 ### 3192 — Minimum Operations to Make Binary Array Elements Equal to One II
 
