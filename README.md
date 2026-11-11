@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1218 | Longest Arithmetic Subsequence of Given Difference | Medium | [Python](1218-longest-arithmetic-subsequence-of-given-difference.py) |
 | 3964 | Minimum Lights to Illuminate a Road | Medium | [Python](3964-minimum-lights-to-illuminate-a-road.py) |
 | 3153 | Sum of Digit Differences of All Pairs | Medium | [Python](3153-sum-of-digit-differences-of-all-pairs.py) |
 | 3192 | Minimum Operations to Make Binary Array Elements Equal to One II | Medium | [Python](3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py) |
@@ -72,6 +73,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1218-longest-arithmetic-subsequence-of-given-difference.py
 python 3964-minimum-lights-to-illuminate-a-road.py
 python 3153-sum-of-digit-differences-of-all-pairs.py
 python 3192-minimum-operations-to-make-binary-array-elements-equal-to-one-ii.py
@@ -154,6 +156,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1218 — Longest Arithmetic Subsequence of Given Difference
+
+Use a hash map to store the longest arithmetic subsequence ending at each value. For every number, look up `num - difference`. If it exists, extend that subsequence by one; otherwise start a new subsequence of length 1. Because the array is processed from left to right, the stored length automatically respects the subsequence order.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ### 3964 — Minimum Lights to Illuminate a Road
 
