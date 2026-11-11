@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1958 | Check if Move is Legal | Medium | [Python](1958-check-if-move-is-legal.py) |
 | 2761 | Prime Pairs With Target Sum | Medium | [Python](2761-prime-pairs-with-target-sum.py) |
 | 2121 | Intervals Between Identical Elements | Medium | [Python](2121-intervals-between-identical-elements.py) |
 | 1895 | Largest Magic Square | Medium | [Python](1895-largest-magic-square.py) |
@@ -68,6 +69,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1958-check-if-move-is-legal.py
 python 2761-prime-pairs-with-target-sum.py
 python 2121-intervals-between-identical-elements.py
 python 1895-largest-magic-square.py
@@ -146,6 +148,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 1958 — Check if Move is Legal
+
+Check all 8 possible directions from the move position. In each direction, move through one or more opponent pieces and then verify that the next cell contains the player's own color. If such a sequence exists, the move forms a good line and is legal. Otherwise, check the remaining directions.
+
+- **Time:** O(1)
+- **Auxiliary space:** O(1)
 
 ### 2761 — Prime Pairs With Target Sum
 
