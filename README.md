@@ -161,6 +161,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 
 ## Python Approaches
 
+### 3144 — Minimum Substring Partition of Equal Character Frequency
+
+Use dynamic programming. For each starting index, extend the substring one character at a time while maintaining character frequencies, the number of distinct characters, and the maximum frequency. A substring is balanced when `length == distinct * max_freq`, meaning every distinct character occurs exactly `max_freq` times. When a balanced substring is found, update the minimum partition count for its ending position.
+
+- **Time:** O(n²)
+- **Auxiliary space:** O(n)
+
 ### 641 — Design Circular Deque
 
 Use a fixed-size array as a circular buffer. Keep `front` pointing to the first element, `rear` pointing to the next free position after the last element, and `count` tracking the current number of elements. Insertions and deletions update the corresponding pointer with modulo `size`, allowing the deque to wrap around without shifting elements. `isEmpty` and `isFull` are determined directly from `count`.
