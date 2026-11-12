@@ -155,7 +155,7 @@ The standalone scripts include sample assertions and print `All sample tests pas
 
 ### 3705 — Find Golden Hour Customers
 
-Group orders by customer and calculate the total number of orders, the percentage of orders placed during the lunch or evening peak windows, and the average rating from rated orders. Use `COUNT(order_rating)` to measure rating completion while `AVG(order_rating)` automatically ignores NULL ratings. Filter with `HAVING` for the minimum order count, peak-hour percentage, average rating, and rating completion requirements, then sort by average rating and customer ID in descending order.
+Group orders by customer and calculate the total number of orders, peak-hour orders, rated orders, and average rating. Peak hours are checked with `TIME(order_timestamp)` for 11:00–14:00 and 18:00–21:00. Use `COUNT(order_rating)` to measure rating completion while `AVG(order_rating)` ignores NULL ratings. The peak-hour percentage is rounded to the nearest whole number for the required output, while the average rating is rounded to 2 decimal places. Filter with `HAVING` for all four golden-hour criteria, then sort by average rating and customer ID in descending order.
 
 - **Time:** O(n), where n is the number of orders
 - **Auxiliary space:** O(c), where c is the number of customers in the grouped result
