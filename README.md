@@ -161,6 +161,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 
 ## Python Approaches
 
+### 641 — Design Circular Deque
+
+Use a fixed-size array as a circular buffer. Keep `front` pointing to the first element, `rear` pointing to the next free position after the last element, and `count` tracking the current number of elements. Insertions and deletions update the corresponding pointer with modulo `size`, allowing the deque to wrap around without shifting elements. `isEmpty` and `isFull` are determined directly from `count`.
+
+- **Time:** O(1) for every operation
+- **Auxiliary space:** O(k), for the fixed-size circular buffer
+
 ### 1226 — The Dining Philosophers
 
 Use one lock for each fork to ensure that a fork can be held by only one philosopher at a time. Map the left fork to `(philosopher + 1) % 5` and the right fork to `philosopher`. To prevent deadlock, even-numbered philosophers acquire their left fork first while odd-numbered philosophers acquire their right fork first, breaking the circular-wait condition. Once both locks are held, call the required pick, eat, and put callbacks, then release both fork locks.
