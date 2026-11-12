@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2683 | Neighboring Bitwise XOR | Medium | [Python](2683-neighboring-bitwise-xor.py) |
 | 1218 | Longest Arithmetic Subsequence of Given Difference | Medium | [Python](1218-longest-arithmetic-subsequence-of-given-difference.py) |
 | 3964 | Minimum Lights to Illuminate a Road | Medium | [Python](3964-minimum-lights-to-illuminate-a-road.py) |
 | 3153 | Sum of Digit Differences of All Pairs | Medium | [Python](3153-sum-of-digit-differences-of-all-pairs.py) |
@@ -73,6 +74,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2683-neighboring-bitwise-xor.py
 python 1218-longest-arithmetic-subsequence-of-given-difference.py
 python 3964-minimum-lights-to-illuminate-a-road.py
 python 3153-sum-of-digit-differences-of-all-pairs.py
@@ -156,6 +158,13 @@ Self-join `ProductPurchases` on `user_id` to pair products bought by the same cu
 - **Auxiliary space:** O(Q) for grouped product pairs, where Q is the number of distinct pairs generated
 
 ## Python Approaches
+
+### 2683 — Neighboring Bitwise XOR
+
+XOR all values in `derived`. Every value in the original binary array appears exactly twice in the XOR expression, so the total must cancel to zero. Therefore, a valid `original` array exists exactly when the XOR of all elements in `derived` is zero.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(1)
 
 ### 1218 — Longest Arithmetic Subsequence of Given Difference
 
