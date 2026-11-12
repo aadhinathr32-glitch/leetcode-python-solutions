@@ -1,5 +1,5 @@
 class Solution:
-    def minimumSubstringsInPartition(self, s: str) -> int:
+    def minimumSubstringsInPartition(self, s):
         n = len(s)
 
         dp = [float('inf')] * (n + 1)
