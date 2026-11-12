@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3705 | Find Golden Hour Customers | Medium | [SQL](sql/3705-find-golden-hour-customers.sql) |
 | 1226 | The Dining Philosophers | Medium | [Python](1226-the-dining-philosophers.py) |
 | 2683 | Neighboring Bitwise XOR | Medium | [Python](2683-neighboring-bitwise-xor.py) |
 | 1218 | Longest Arithmetic Subsequence of Given Difference | Medium | [Python](1218-longest-arithmetic-subsequence-of-given-difference.py) |
@@ -151,6 +152,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## SQL Solutions
+
+### 3705 — Find Golden Hour Customers
+
+Group orders by customer and calculate the total number of orders, the percentage of orders placed during the lunch or evening peak windows, and the average rating from rated orders. Use `COUNT(order_rating)` to measure rating completion while `AVG(order_rating)` automatically ignores NULL ratings. Filter with `HAVING` for the minimum order count, peak-hour percentage, average rating, and rating completion requirements, then sort by average rating and customer ID in descending order.
+
+- **Time:** O(n), where n is the number of orders
+- **Auxiliary space:** O(c), where c is the number of customers in the grouped result
 
 ### 3521 — Find Product Recommendation Pairs
 
