@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1040 | Moving Stones Until Consecutive II | Medium | [Python](1040-moving-stones-until-consecutive-ii.py) |
 | 2390 | Removing Stars From a String | Medium | [Python](2390-removing-stars-from-a-string.py) |
 | 3705 | Find Golden Hour Customers | Medium | [SQL](sql/3705-find-golden-hour-customers.sql) |
 | 1226 | The Dining Philosophers | Medium | [Python](1226-the-dining-philosophers.py) |
@@ -77,6 +78,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1040-moving-stones-until-consecutive-ii.py
 python 2390-removing-stars-from-a-string.py
 python 1226-the-dining-philosophers.py
 python 2683-neighboring-bitwise-xor.py
@@ -154,6 +156,14 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 1040 — Moving Stones Until Consecutive II
+
+Sort the stone positions and use two pointers to find the largest group of stones that already fits inside a window of `n` positions. The stones outside that window determine the minimum moves. Handle the special case where `n-1` stones are consecutive and the remaining endpoint is too far away, which requires 2 moves. For the maximum, calculate the empty positions on either side while accounting for the endpoint restriction.
+
+- **Time:** O(n log n)
+- **Auxiliary space:** O(1) apart from sorting
+
 
 ### 2390 — Removing Stars From a String
 
