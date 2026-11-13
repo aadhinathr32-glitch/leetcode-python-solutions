@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1888 | Minimum Number of Flips to Make the Binary String Alternating | Medium | [Python](1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py) |
 | 973 | K Closest Points to Origin | Medium | [Python](973-k-closest-points-to-origin.py) |
 | 1040 | Moving Stones Until Consecutive II | Medium | [Python](1040-moving-stones-until-consecutive-ii.py) |
 | 2390 | Removing Stars From a String | Medium | [Python](2390-removing-stars-from-a-string.py) |
@@ -79,6 +80,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py
 python 973-k-closest-points-to-origin.py
 python 1040-moving-stones-until-consecutive-ii.py
 python 2390-removing-stars-from-a-string.py
@@ -158,6 +160,14 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 1888 — Minimum Number of Flips to Make the Binary String Alternating
+
+Consider both possible alternating patterns: `010101...` and `101010...`. Because type-1 operations rotate the string, double the string and use a sliding window of length `n` to represent every possible rotation. Maintain the number of mismatches with each pattern inside the current window and take the minimum mismatch count.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n), for the doubled string
+
 
 ### 973 — K Closest Points to Origin
 
