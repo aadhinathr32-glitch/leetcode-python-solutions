@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2390 | Removing Stars From a String | Medium | [Python](2390-removing-stars-from-a-string.py) |
 | 3705 | Find Golden Hour Customers | Medium | [SQL](sql/3705-find-golden-hour-customers.sql) |
 | 1226 | The Dining Philosophers | Medium | [Python](1226-the-dining-philosophers.py) |
 | 2683 | Neighboring Bitwise XOR | Medium | [Python](2683-neighboring-bitwise-xor.py) |
@@ -76,6 +77,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2390-removing-stars-from-a-string.py
 python 1226-the-dining-philosophers.py
 python 2683-neighboring-bitwise-xor.py
 python 1218-longest-arithmetic-subsequence-of-given-difference.py
@@ -150,6 +152,15 @@ python 59-spiral-matrix-ii.py
 ```
 
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
+
+## Python Approaches
+
+### 2390 — Removing Stars From a String
+
+Use a stack to simulate the removals. Add each normal character to the stack. When a `*` is encountered, pop the most recently added character because it is the closest non-star character to the left. After processing the string, join the remaining stack characters.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(n)
 
 ## SQL Solutions
 
