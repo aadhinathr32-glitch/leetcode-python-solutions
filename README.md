@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2300 | Successful Pairs of Spells and Potions | Medium | [Python](2300-successful-pairs-of-spells-and-potions.py) |
 | 1888 | Minimum Number of Flips to Make the Binary String Alternating | Medium | [Python](1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py) |
 | 973 | K Closest Points to Origin | Medium | [Python](973-k-closest-points-to-origin.py) |
 | 1040 | Moving Stones Until Consecutive II | Medium | [Python](1040-moving-stones-until-consecutive-ii.py) |
@@ -80,6 +81,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2300-successful-pairs-of-spells-and-potions.py
 python 1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py
 python 973-k-closest-points-to-origin.py
 python 1040-moving-stones-until-consecutive-ii.py
@@ -160,6 +162,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 2300 — Successful Pairs of Spells and Potions
+
+Sort the potions so that stronger potions appear later. For each spell, calculate the minimum potion strength required to satisfy `spell × potion >= success` using ceiling division. Use binary search to find the first potion that meets this requirement; every potion from that index onward forms a successful pair.
+
+- **Time:** O(m log m + n log m), where n is the number of spells and m is the number of potions
+- **Auxiliary space:** O(n) for the result array
 
 ### 1888 — Minimum Number of Flips to Make the Binary String Alternating
 
