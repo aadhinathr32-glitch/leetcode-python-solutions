@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 973 | K Closest Points to Origin | Medium | [Python](973-k-closest-points-to-origin.py) |
 | 1040 | Moving Stones Until Consecutive II | Medium | [Python](1040-moving-stones-until-consecutive-ii.py) |
 | 2390 | Removing Stars From a String | Medium | [Python](2390-removing-stars-from-a-string.py) |
 | 3705 | Find Golden Hour Customers | Medium | [SQL](sql/3705-find-golden-hour-customers.sql) |
@@ -78,6 +79,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 973-k-closest-points-to-origin.py
 python 1040-moving-stones-until-consecutive-ii.py
 python 2390-removing-stars-from-a-string.py
 python 1226-the-dining-philosophers.py
@@ -156,6 +158,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 973 — K Closest Points to Origin
+
+Sort the points by their squared distance from the origin, calculated as `x² + y²`. The square root is unnecessary because comparing squared distances gives the same ordering as comparing actual Euclidean distances. After sorting, return the first `k` points.
+
+- **Time:** O(n log n), for sorting the points
+- **Auxiliary space:** O(log n), for Python's sorting implementation
 
 ### 1040 — Moving Stones Until Consecutive II
 
