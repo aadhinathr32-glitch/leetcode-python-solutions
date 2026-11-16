@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3091 | Apply Operations to Make Sum of Array Greater Than or Equal to K | Medium | [Python](3091-minimum-operations-to-make-array-sum-at-least-k.py) |
 | 1039 | Minimum Score Triangulation of Polygon | Medium | [Python](1039-minimum-score-triangulation-of-polygon.py) |
 | 1976 | Number of Ways to Arrive at Destination | Medium | [Python](1976-number-of-ways-to-arrive-at-destination.py) |
 | 2300 | Successful Pairs of Spells and Potions | Medium | [Python](2300-successful-pairs-of-spells-and-potions.py) |
@@ -83,6 +84,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3091-minimum-operations-to-make-array-sum-at-least-k.py
 python 1039-minimum-score-triangulation-of-polygon.py
 python 1976-number-of-ways-to-arrive-at-destination.py
 python 2300-successful-pairs-of-spells-and-potions.py
@@ -166,6 +168,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 3091 — Apply Operations to Make Sum of Array Greater Than or Equal to K
+
+Try making the value of the original element equal to `x`. Increasing `1` to `x` costs `x - 1` operations. To make the total sum at least `k`, we need `ceil(k / x)` copies of `x`, which requires `ceil(k / x) - 1` duplicate operations. Therefore, for every possible `x`, calculate the total operations and keep the minimum.
+
+- **Time:** O(k)
+- **Auxiliary space:** O(1)
 
 ### 1039 — Minimum Score Triangulation of Polygon
 
