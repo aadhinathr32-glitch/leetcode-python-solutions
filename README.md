@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 988 | Smallest String Starting From Leaf | Medium | [Python](988-smallest-string-starting-from-leaf.py) |
 | 3091 | Apply Operations to Make Sum of Array Greater Than or Equal to K | Medium | [Python](3091-minimum-operations-to-make-array-sum-at-least-k.py) |
 | 1039 | Minimum Score Triangulation of Polygon | Medium | [Python](1039-minimum-score-triangulation-of-polygon.py) |
 | 1976 | Number of Ways to Arrive at Destination | Medium | [Python](1976-number-of-ways-to-arrive-at-destination.py) |
@@ -84,6 +85,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 988-smallest-string-starting-from-leaf.py
 python 3091-minimum-operations-to-make-array-sum-at-least-k.py
 python 1039-minimum-score-triangulation-of-polygon.py
 python 1976-number-of-ways-to-arrive-at-destination.py
@@ -168,6 +170,12 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+### 988 — Smallest String Starting From Leaf
+
+Use depth-first search to explore every root-to-leaf path. Store the current characters in a shared path list, and when a leaf is reached, reverse the path to form the required leaf-to-root string. Compare the results from the left and right subtrees and return the lexicographically smaller valid string.
+
+- **Time:** O(n × h) in the worst case due to string construction/comparison, where n is the number of nodes and h is the tree height
+- **Auxiliary space:** O(h) for the recursion stack and current path
 
 ### 3091 — Apply Operations to Make Sum of Array Greater Than or Equal to K
 
