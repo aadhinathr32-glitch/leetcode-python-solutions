@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1976 | Number of Ways to Arrive at Destination | Medium | [Python](1976-number-of-ways-to-arrive-at-destination.py) |
 | 2300 | Successful Pairs of Spells and Potions | Medium | [Python](2300-successful-pairs-of-spells-and-potions.py) |
 | 1888 | Minimum Number of Flips to Make the Binary String Alternating | Medium | [Python](1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py) |
 | 973 | K Closest Points to Origin | Medium | [Python](973-k-closest-points-to-origin.py) |
@@ -81,6 +82,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1976-number-of-ways-to-arrive-at-destination.py
 python 2300-successful-pairs-of-spells-and-potions.py
 python 1888-minimum-number-of-flips-to-make-the-binary-string-alternating.py
 python 973-k-closest-points-to-origin.py
@@ -162,6 +164,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 1976 — Number of Ways to Arrive at Destination
+
+Use Dijkstra's algorithm to find the shortest travel time from intersection 0 to every other intersection. Along with each shortest distance, maintain the number of shortest paths that reach that intersection. When a strictly shorter path is found, replace the path count with the current node's number of ways. When another path reaches the same shortest distance, add its number of ways modulo `10^9 + 7`.
+
+- **Time:** O((n + E) log n), where E is the number of roads
+- **Auxiliary space:** O(n + E)
 
 ### 2300 — Successful Pairs of Spells and Potions
 
