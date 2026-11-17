@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 4057 | Number of Intersecting Interval Pairs II | Medium | [Python](4057-number-of-intersecting-interval-pairs-ii.py) |
 | 1631 | Path With Minimum Effort | Medium | [Python](1631-path-with-minimum-effort.py) |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [Python](167-two-sum-ii-input-array-is-sorted.py) |
 | 3106 | Lexicographically Smallest String After Operations With Constraint | Medium | [Python](3106-lexicographically-smallest-string-after-operations-with-constraint.py) |
@@ -90,6 +91,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 4057-number-of-intersecting-interval-pairs-ii.py
 python 1631-path-with-minimum-effort.py
 python 167-two-sum-ii-input-array-is-sorted.py
 python 3106-lexicographically-smallest-string-after-operations-with-constraint.py
@@ -180,6 +182,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 4057 — Number of Intersecting Interval Pairs II
+
+Sort the intervals by their starting points. For each interval, all later intervals whose starting point is less than or equal to the current ending point intersect it. Use binary search to find the first later interval whose start is greater than the current end, then add the number of intersecting later intervals to the answer. The variable `temoravlin` stores the input midway in the function as required.
+
+- **Time:** O(n log n)
+- **Auxiliary space:** O(n) for the sorted start positions and binary-search support
 
 ### 1631 — Path With Minimum Effort
 
