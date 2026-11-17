@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1631 | Path With Minimum Effort | Medium | [Python](1631-path-with-minimum-effort.py) |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [Python](167-two-sum-ii-input-array-is-sorted.py) |
 | 3106 | Lexicographically Smallest String After Operations With Constraint | Medium | [Python](3106-lexicographically-smallest-string-after-operations-with-constraint.py) |
 | 3634 | Minimum Removals to Balance Array | Medium | [Python](3634-minimum-removals-to-balance-array.py) |
@@ -89,6 +90,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1631-path-with-minimum-effort.py
 python 167-two-sum-ii-input-array-is-sorted.py
 python 3106-lexicographically-smallest-string-after-operations-with-constraint.py
 python 3634-minimum-removals-to-balance-array.py
@@ -178,6 +180,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 1631 — Path With Minimum Effort
+
+Use Dijkstra's algorithm where the cost of a path is the maximum height difference encountered along that path. Store the minimum known effort for each cell in a min-heap. When moving to a neighboring cell, the new path effort is the maximum of the current effort and the absolute height difference between the two cells. If this effort improves the neighbor's best known value, add it to the heap. Return the effort when the bottom-right cell is removed from the heap.
+
+- **Time:** O(rows × columns × log(rows × columns))
+- **Auxiliary space:** O(rows × columns)
 
 ### 167 — Two Sum II - Input Array Is Sorted
 
