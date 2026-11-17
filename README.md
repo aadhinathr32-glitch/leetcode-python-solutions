@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3106 | Lexicographically Smallest String After Operations With Constraint | Medium | [Python](3106-lexicographically-smallest-string-after-operations-with-constraint.py) |
 | 3634 | Minimum Removals to Balance Array | Medium | [Python](3634-minimum-removals-to-balance-array.py) |
 | 2055 | Plates Between Candles | Medium | [Python](2055-plates-between-candles.py) |
 | 988 | Smallest String Starting From Leaf | Medium | [Python](988-smallest-string-starting-from-leaf.py) |
@@ -87,6 +88,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3106-lexicographically-smallest-string-after-operations-with-constraint.py
 python 3634-minimum-removals-to-balance-array.py
 python 2055-plates-between-candles.py
 python 988-smallest-string-starting-from-leaf.py
@@ -174,6 +176,12 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 3106. Lexicographically Smallest String After Operations With Constraint
+
+Process the string from left to right. For each character, calculate its minimum cyclic distance to `a`. If the cost fits within the remaining budget, change it to `a`. Otherwise, use the remaining budget to move the character backward toward `a`, producing the smallest possible character, then stop using the remaining budget.
+
+**Complexity:** O(n) time and O(n) space.
 
 ### 3634. Minimum Removals to Balance Array
 
