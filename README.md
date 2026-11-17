@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3634 | Minimum Removals to Balance Array | Medium | [Python](3634-minimum-removals-to-balance-array.py) |
 | 2055 | Plates Between Candles | Medium | [Python](2055-plates-between-candles.py) |
 | 988 | Smallest String Starting From Leaf | Medium | [Python](988-smallest-string-starting-from-leaf.py) |
 | 3091 | Apply Operations to Make Sum of Array Greater Than or Equal to K | Medium | [Python](3091-minimum-operations-to-make-array-sum-at-least-k.py) |
@@ -86,6 +87,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 3634-minimum-removals-to-balance-array.py
 python 2055-plates-between-candles.py
 python 988-smallest-string-starting-from-leaf.py
 python 3091-minimum-operations-to-make-array-sum-at-least-k.py
@@ -172,6 +174,12 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 3634. Minimum Removals to Balance Array
+
+Sort the array and use a sliding window to find the largest balanced group. For each right endpoint, move the left pointer forward until the maximum value satisfies `nums[right] <= nums[left] * k`. Keeping the largest valid window minimizes the number of removals.
+
+**Complexity:** O(n log n) time and O(1) extra space apart from the sorting implementation.
 
 ### 2055. Plates Between Candles
 
