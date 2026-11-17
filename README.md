@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 167 | Two Sum II - Input Array Is Sorted | Medium | [Python](167-two-sum-ii-input-array-is-sorted.py) |
 | 3106 | Lexicographically Smallest String After Operations With Constraint | Medium | [Python](3106-lexicographically-smallest-string-after-operations-with-constraint.py) |
 | 3634 | Minimum Removals to Balance Array | Medium | [Python](3634-minimum-removals-to-balance-array.py) |
 | 2055 | Plates Between Candles | Medium | [Python](2055-plates-between-candles.py) |
@@ -88,6 +89,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 167-two-sum-ii-input-array-is-sorted.py
 python 3106-lexicographically-smallest-string-after-operations-with-constraint.py
 python 3634-minimum-removals-to-balance-array.py
 python 2055-plates-between-candles.py
@@ -176,6 +178,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 167 — Two Sum II - Input Array Is Sorted
+
+Use two pointers because the array is already sorted. Start with one pointer at the beginning and another at the end. If their sum is too small, move the left pointer right; if it is too large, move the right pointer left. When the sum equals the target, return the 1-indexed positions.
+
+- **Time:** O(n)
+- **Auxiliary space:** O(1)
 
 ### 3106. Lexicographically Smallest String After Operations With Constraint
 
