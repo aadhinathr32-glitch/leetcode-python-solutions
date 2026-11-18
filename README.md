@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 2654 | Minimum Number of Operations to Make All Array Elements Equal to 1 | Medium | [Python](2654-minimum-number-of-operations-to-make-all-array-elements-equal-to-1.py) |
 | 718 | Maximum Length of Repeated Subarray | Medium | [Python](718-maximum-length-of-repeated-subarray.py) |
 | 1594 | Maximum Non Negative Product in a Matrix | Medium | [Python](1594-maximum-non-negative-product-in-a-matrix.py) |
 | 3564 | Seasonal Sales Analysis | Medium | [SQL](sql/3564-seasonal-sales-analysis.sql) |
@@ -94,6 +95,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 2654-minimum-number-of-operations-to-make-all-array-elements-equal-to-1.py
 python 718-maximum-length-of-repeated-subarray.py
 python 1594-maximum-non-negative-product-in-a-matrix.py
 python sql/3564-seasonal-sales-analysis.sql
@@ -189,6 +191,14 @@ The standalone scripts include sample assertions and print `All sample tests pas
 
 ## Python Approaches
 
+### 2654 — Minimum Number of Operations to Make All Array Elements Equal to 1
+
+If the array already contains `1`s, each non-1 element can be converted to `1` in one operation, so the answer is `n - count(1)`. Otherwise, find the shortest subarray whose GCD is `1`. A subarray of length `L` needs `L - 1` operations to create the first `1`; after that, `n - 1` more operations spread the `1` across the whole array. If no subarray has GCD `1`, it is impossible.
+
+- **Time:** O(n² log M), where M is the maximum value in nums
+- **Auxiliary space:** O(1)
+
+
 ### 718 — Maximum Length of Repeated Subarray
 
 Use dynamic programming where `dp[i][j]` represents the length of the common contiguous subarray starting at `nums1[i]` and `nums2[j]`. If the two current values are equal, extend the matching subarray with `1 + dp[i + 1][j + 1]`; otherwise, the value is zero. Track the largest value seen across the table.
@@ -198,7 +208,6 @@ Use dynamic programming where `dp[i][j]` represents the length of the common con
 
 
 ### 1594 — Maximum Non Negative Product in a Matrix
-
 Use dynamic programming and store both the minimum and maximum product that can reach each cell. This is necessary because multiplying by a negative value can turn the smallest product into the largest and vice versa. For each cell, multiply both products from the top and left neighbors by the current value, then keep the new minimum and maximum. At the bottom-right cell, return the maximum product modulo 10^9 + 7, or -1 if it is negative.
 
 - **Time:** O(m × n)
@@ -397,7 +406,6 @@ Check all 8 possible directions from the move position. In each direction, move 
 - **Auxiliary space:** O(1)
 
 ### 2761 — Prime Pairs With Target Sum
-
 Use the Sieve of Eratosthenes to precompute which numbers up to `n` are prime. Then check every possible `x` from 2 through `n // 2`; its matching value is `y = n - x`. If both are prime, add `[x, y]` to the result. Iterating `x` in increasing order automatically produces the required sorted pairs.
 
 - **Time:** O(n log log n)
@@ -597,7 +605,6 @@ Enumerate all substrings and maintain vowel and consonant counts as the end inde
 ### 2139 — Minimum Moves to Reach Target Score
 
 Work backward from `target`: halve it when it is even and a double remains; otherwise subtract one to reverse an increment. Once no doubles remain, add all remaining increments (`target - 1`).
-
 - **Time:** O(log target)
 - **Auxiliary space:** O(1)
 
