@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 718 | Maximum Length of Repeated Subarray | Medium | [Python](718-maximum-length-of-repeated-subarray.py) |
 | 1594 | Maximum Non Negative Product in a Matrix | Medium | [Python](1594-maximum-non-negative-product-in-a-matrix.py) |
 | 3564 | Seasonal Sales Analysis | Medium | [SQL](sql/3564-seasonal-sales-analysis.sql) |
 | 4057 | Number of Intersecting Interval Pairs II | Medium | [Python](4057-number-of-intersecting-interval-pairs-ii.py) |
@@ -93,6 +94,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 718-maximum-length-of-repeated-subarray.py
 python 1594-maximum-non-negative-product-in-a-matrix.py
 python sql/3564-seasonal-sales-analysis.sql
 python 4057-number-of-intersecting-interval-pairs-ii.py
@@ -186,6 +188,14 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 718 — Maximum Length of Repeated Subarray
+
+Use dynamic programming where `dp[i][j]` represents the length of the common contiguous subarray starting at `nums1[i]` and `nums2[j]`. If the two current values are equal, extend the matching subarray with `1 + dp[i + 1][j + 1]`; otherwise, the value is zero. Track the largest value seen across the table.
+
+- **Time:** O(m × n)
+- **Auxiliary space:** O(m × n)
+
 
 ### 1594 — Maximum Non Negative Product in a Matrix
 
