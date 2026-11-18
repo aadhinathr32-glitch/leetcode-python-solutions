@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 457 | Circular Array Loop | Medium | [Python](457-circular-array-loop.py) |
 | 2654 | Minimum Number of Operations to Make All Array Elements Equal to 1 | Medium | [Python](2654-minimum-number-of-operations-to-make-all-array-elements-equal-to-1.py) |
 | 718 | Maximum Length of Repeated Subarray | Medium | [Python](718-maximum-length-of-repeated-subarray.py) |
 | 1594 | Maximum Non Negative Product in a Matrix | Medium | [Python](1594-maximum-non-negative-product-in-a-matrix.py) |
@@ -95,6 +96,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 457-circular-array-loop.py
 python 2654-minimum-number-of-operations-to-make-all-array-elements-equal-to-1.py
 python 718-maximum-length-of-repeated-subarray.py
 python 1594-maximum-non-negative-product-in-a-matrix.py
@@ -190,6 +192,14 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 457 — Circular Array Loop
+
+Use Floyd's slow and fast pointer technique to detect a cycle while enforcing that every visited element has the same movement direction. A positive value means forward movement and a negative value means backward movement. When the pointers meet, reject the cycle if it contains only one index. After processing a starting point, mark its valid direction path as visited by changing those values to zero, which avoids revisiting the same path.
+
+- **Time:** O(n), because each index is processed a constant number of times
+- **Auxiliary space:** O(1)
+
 
 ### 2654 — Minimum Number of Operations to Make All Array Elements Equal to 1
 
