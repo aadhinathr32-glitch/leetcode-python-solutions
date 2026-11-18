@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 3564 | Seasonal Sales Analysis | Medium | [SQL](sql/3564-seasonal-sales-analysis.sql) |
 | 4057 | Number of Intersecting Interval Pairs II | Medium | [Python](4057-number-of-intersecting-interval-pairs-ii.py) |
 | 1631 | Path With Minimum Effort | Medium | [Python](1631-path-with-minimum-effort.py) |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [Python](167-two-sum-ii-input-array-is-sorted.py) |
@@ -91,6 +92,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python sql/3564-seasonal-sales-analysis.sql
 python 4057-number-of-intersecting-interval-pairs-ii.py
 python 1631-path-with-minimum-effort.py
 python 167-two-sum-ii-input-array-is-sorted.py
@@ -182,6 +184,14 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 3564 — Seasonal Sales Analysis
+
+Join sales with products and assign every sale to a season based on its month. Group by season and product category to calculate total quantity and total revenue. Use `ROW_NUMBER()` within each season, ordering by quantity descending, revenue descending, and category ascending to apply all tie-breaking rules. Keep only the top-ranked category for each season and order the final result by season.
+
+- **Time:** O(n log n) due to grouping and window-function processing
+- **Auxiliary space:** O(n)
+
 
 ### 4057 — Number of Intersecting Interval Pairs II
 
