@@ -6,6 +6,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 
 | # | Problem | Difficulty | Solution |
 |---|---|---|---|
+| 1594 | Maximum Non Negative Product in a Matrix | Medium | [Python](1594-maximum-non-negative-product-in-a-matrix.py) |
 | 3564 | Seasonal Sales Analysis | Medium | [SQL](sql/3564-seasonal-sales-analysis.sql) |
 | 4057 | Number of Intersecting Interval Pairs II | Medium | [Python](4057-number-of-intersecting-interval-pairs-ii.py) |
 | 1631 | Path With Minimum Effort | Medium | [Python](1631-path-with-minimum-effort.py) |
@@ -92,6 +93,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## How to run
 
 ```bash
+python 1594-maximum-non-negative-product-in-a-matrix.py
 python sql/3564-seasonal-sales-analysis.sql
 python 4057-number-of-intersecting-interval-pairs-ii.py
 python 1631-path-with-minimum-effort.py
@@ -184,6 +186,13 @@ python 59-spiral-matrix-ii.py
 The standalone scripts include sample assertions and print `All sample tests passed.` when those assertions succeed. The LeetCode 449 solution is a `Codec` class and relies on LeetCode's provided `TreeNode` definition.
 
 ## Python Approaches
+
+### 1594 — Maximum Non Negative Product in a Matrix
+
+Use dynamic programming and store both the minimum and maximum product that can reach each cell. This is necessary because multiplying by a negative value can turn the smallest product into the largest and vice versa. For each cell, multiply both products from the top and left neighbors by the current value, then keep the new minimum and maximum. At the bottom-right cell, return the maximum product modulo 10^9 + 7, or -1 if it is negative.
+
+- **Time:** O(m × n)
+- **Auxiliary space:** O(m × n)
 
 ### 3564 — Seasonal Sales Analysis
 
