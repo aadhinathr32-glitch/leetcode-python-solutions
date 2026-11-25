@@ -92,6 +92,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 | 1424 | Diagonal Traverse II | Medium | [Python](1424-diagonal-traverse-ii.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
+| 2429 | Minimize XOR | Medium | [Python](2429-minimize-xor.py) |
 
 ## How to run
 
@@ -787,6 +788,13 @@ Use recursion to trace the symbol back to the previous row. Its parent position 
 
 - **Time:** O(n)
 - **Auxiliary space:** O(n) for the recursion stack
+
+### 2429 — Minimize XOR
+
+Count the number of set bits in `num2`. To minimize `x XOR num1`, first keep as many of the highest set bits from `num1` as possible. If more set bits are needed, add the lowest available bit positions. This keeps the XOR value as small as possible while giving `x` exactly the required number of set bits.
+
+- **Time:** O(32), effectively O(1)
+- **Auxiliary space:** O(1)
 
 ### 78 — Subsets
 
