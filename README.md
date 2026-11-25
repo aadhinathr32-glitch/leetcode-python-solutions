@@ -5,7 +5,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 ## Problems
 
 | # | Problem | Difficulty | Solution |
-|---|---|---|---|
+|---|---|---|---|\n| 1 | Two Sum | Easy | [Python](1-two-sum.py) |\n| 20 | Valid Parentheses | Easy | [Python](20-valid-parentheses.py) |\n| 26 | Remove Duplicates from Sorted Array | Easy | [Python](26-remove-duplicates-from-sorted-array.py) |\n| 53 | Maximum Subarray | Medium | [Python](53-maximum-subarray.py) |\n| 56 | Merge Intervals | Medium | [Python](56-merge-intervals.py) |\n| 125 | Valid Palindrome | Easy | [Python](125-valid-palindrome.py) |\n| 238 | Product of Array Except Self | Medium | [Python](238-product-of-array-except-self.py) |\n| 242 | Valid Anagram | Easy | [Python](242-valid-anagram.py) |\n| 2971 | Find Polygon With the Largest Perimeter | Easy | [Python](2971-find-polygon-with-the-largest-perimeter.py) |\n| 387 | First Unique Character in a String | Easy | [Python](387-first-unique-character-in-a-string.py) |\n| 704 | Binary Search | Easy | [Python](704-binary-search.py) |\n| 2934 | Minimum Operations to Maximize Last Elements in Arrays | Medium | [Python](2934-minimum-operations-to-maximize-last-elements-in-arrays.py) |
 | 457 | Circular Array Loop | Medium | [Python](457-circular-array-loop.py) |
 | 2654 | Minimum Number of Operations to Make All Array Elements Equal to 1 | Medium | [Python](2654-minimum-number-of-operations-to-make-all-array-elements-equal-to-1.py) |
 | 718 | Maximum Length of Repeated Subarray | Medium | [Python](718-maximum-length-of-repeated-subarray.py) |
