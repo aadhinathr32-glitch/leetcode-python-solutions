@@ -1,32 +1,42 @@
 from bisect import bisect_left, bisect_right
 from collections import Counter
 
+
 class Solution:
     def maxFrequency(self, nums, k, numOperations):
         nums.sort()
         count = Counter(nums)
 
-        ans = max(count.values())
+        ans = 0
 
-        # 1. Target is already present in nums.
-        # We can use existing occurrences plus at most
-        # numOperations other elements within distance k.
-        for target, freq in count.items():
+        # Try every possible target value
+        for target in range(nums[0], nums[-1] + 1):
+            left = bisect_left(nums, target - k)
+            right = bisect_right(nums, target + k)
+
+            # Elements that can become target
+            while nums[right - 1] - nums[left] > 2 * k:
+                left += 1
+
+            window = right - left
+
+            # If target is not an existing value,
+            # every element needs one operation.
+            ans = max(ans, min(window, numOperations))
+
+        # Check every value that already exists.
+        # Existing elements do not need an operation.
+        for target in count:
             left = bisect_left(nums, target - k)
             right = bisect_right(nums, target + k)
 
             possible = right - left
-            ans = max(ans, freq + min(numOperations, possible - freq))
 
-        # 2. Target is not present.
-        # For an optimal target, we can move it to nums[i] + k,
-        # where nums[i] is the smallest element in its useful range.
-        # Then every element in [nums[i], nums[i] + 2*k] can become target.
-        for x in nums:
-            left = bisect_left(nums, x)
-            right = bisect_right(nums, x + 2 * k)
+            frequency = min(
+                possible,
+                count[target] + numOperations
+            )
 
-            possible = right - left
-            ans = max(ans, min(possible, numOperations))
+            ans = max(ans, frequency)
 
         return ans
