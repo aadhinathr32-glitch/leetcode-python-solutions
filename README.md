@@ -92,6 +92,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 | 1424 | Diagonal Traverse II | Medium | [Python](1424-diagonal-traverse-ii.py) |
 | 779 | K-th Symbol in Grammar | Medium | [Python](779-k-th-symbol-in-grammar.py) |
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
+| 73 | Set Matrix Zeroes | Medium | [Python](73-set-matrix-zeroes.py) |
 | 2429 | Minimize XOR | Medium | [Python](2429-minimize-xor.py) |
 
 ## How to run
@@ -827,3 +828,10 @@ Group each value by its diagonal index, `row + column`. Visit rows from bottom t
 ## Goal
 
 Keep adding solutions as I practice algorithms, problem-solving, and Python.
+
+### 73 — Set Matrix Zeroes
+
+Use the first row and first column as marker storage instead of allocating separate row and column arrays. First remember whether the original first row or first column contains a zero. Then scan the rest of the matrix: whenever a zero is found, mark its row and column using the first cell of that row and column. Apply those markers to zero the corresponding rows and columns, and finally handle the first row and first column separately.
+
+- **Time:** O(m × n)
+- **Auxiliary space:** O(1)
