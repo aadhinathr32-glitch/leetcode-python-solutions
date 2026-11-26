@@ -6,24 +6,27 @@ class Solution:
         nums.sort()
         count = Counter(nums)
 
-        ans = 0
+        ans = max(count.values())
 
-        # Try every possible target value
-        for target in range(100001):
+        # 1. Target is already present in nums.
+        # We can use existing occurrences plus at most
+        # numOperations other elements within distance k.
+        for target, freq in count.items():
             left = bisect_left(nums, target - k)
             right = bisect_right(nums, target + k)
 
-            # Elements that can become target
             possible = right - left
+            ans = max(ans, freq + min(numOperations, possible - freq))
 
-            # Elements already equal to target
-            already = count[target]
+        # 2. Target is not present.
+        # For an optimal target, we can move it to nums[i] + k,
+        # where nums[i] is the smallest element in its useful range.
+        # Then every element in [nums[i], nums[i] + 2*k] can become target.
+        for x in nums:
+            left = bisect_left(nums, x)
+            right = bisect_right(nums, x + 2 * k)
 
-            # Remaining elements need an operation
-            need = possible - already
-
-            frequency = already + min(need, numOperations)
-
-            ans = max(ans, frequency)
+            possible = right - left
+            ans = max(ans, min(possible, numOperations))
 
         return ans
