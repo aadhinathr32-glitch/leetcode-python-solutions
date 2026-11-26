@@ -94,6 +94,7 @@ A collection of LeetCode solutions in Python and SQL, with explanations, complex
 | 78 | Subsets | Medium | [Python](78-subsets.py) |
 | 73 | Set Matrix Zeroes | Medium | [Python](73-set-matrix-zeroes.py) |
 | 2429 | Minimize XOR | Medium | [Python](2429-minimize-xor.py) |
+| 3346 | Maximum Frequency of an Element After Performing Operations I | Medium | [Python](3346-maximum-frequency-of-an-element-after-performing-operations-i.py) |
 
 ## How to run
 
@@ -151,6 +152,7 @@ python 3723-maximize-sum-of-squares-of-digits.py
 python 1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold.py
 python 3649-number-of-perfect-pairs.py
 python 2947-count-beautiful-substrings-i.py
+python 3346-maximum-frequency-of-an-element-after-performing-operations-i.py
 ```
 
 
@@ -824,6 +826,14 @@ Group each value by its diagonal index, `row + column`. Visit rows from bottom t
 
 - **Time:** O(N), where N is the total number of elements
 - **Auxiliary space:** O(N) for the diagonal groups and result
+
+
+### 3346 — Maximum Frequency of an Element After Performing Operations I
+
+Sort the array and use binary search to find elements within k of each possible target. For targets that are not already present, every selected element requires one operation, so the frequency is limited by numOperations. For targets already present, existing occurrences require no operation, so combine them with up to numOperations additional elements from the valid range.
+
+- **Time:** O(n log n + V log n + U log n), where V is the value range considered and U is the number of distinct values
+- **Auxiliary space:** O(U) for the frequency counter
 
 ## Goal
 
